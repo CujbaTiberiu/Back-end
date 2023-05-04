@@ -56,9 +56,4 @@ public class Main {
 	}
 	//Esercizio End #1
 	
-	//Esercizio #3
-	
-	
-	//Esercizio End #3
-
 }

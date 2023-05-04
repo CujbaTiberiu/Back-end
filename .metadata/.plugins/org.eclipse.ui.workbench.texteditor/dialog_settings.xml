@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="System.out.println(&quot;ciao!&quot;);"/>
+		<item key="selection" value="&#x09;int n1 = 5;"/>
 		<list key="findhistory">
+			<item value="&#x09;int n1 = 5;"/>
+			<item value="int n1 = 5;"/>
 			<item value="System.out.println(&quot;ciao!&quot;);"/>
 		</list>
 	</section>

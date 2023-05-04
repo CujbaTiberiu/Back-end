@@ -6,6 +6,7 @@ public class Cliente {
 	public String cognome;
 	public String mail;
 	public String dataIscrizione;
+	// meglio public LocalDate dataIscrizione - usare oggetto LocalDate
 	
 	public Cliente(String codice, String nome, String cognome, String mail, String dataIscrizione) {
 		this.codice = codice;
@@ -13,5 +14,6 @@ public class Cliente {
 		this.cognome = cognome;
 		this.mail = mail;
 		this.dataIscrizione = dataIscrizione;
+		// this.dataIscrizione = LocalDate.now();
 	}
 }

@@ -4,7 +4,7 @@ public class CartaSim {
     public int numCell;
     public double credito;
     public Chiamata[] ultimeCinqueChiamate = new Chiamata[5];
-
+    //public static int costoChiamata = 0.20; static perchè è fisso e condiviso per tutte le istanze
     public static class Chiamata {
         public int numero;
         public int tempo;
@@ -28,4 +28,20 @@ public class CartaSim {
     		System.out.println((i+1) + ".Number called: " + this.ultimeCinqueChiamate[i].numero + " - " + "Time " + this.ultimeCinqueChiamate[i].tempo + " minutes" );
     	}
     }
+    
+    /*
+     * per mettere i numeri in automatico
+     * 
+     * public void effettuaChiamata(String numero, int minuti){
+     * Chiamata c = new Chiamata (numero, minuti);
+     * System.out.println("Chiamata effettuata sul num." + c.numeroChiamata + )
+     * this.creditoDisponibile -= minuti*costChiamata;
+     * }
+     * for(int i = 0; i < chiamateEffettuate.length; i++){
+     * if(chiamateEffettuate[i] == null){
+     * chiamateEffettuate[i] = c;
+     * break; -> per fermare l'esecuzione del metodo
+     * }
+     * }
+     * */
 }
