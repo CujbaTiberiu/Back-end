@@ -1,6 +1,5 @@
 package epicode.cicli;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class CicliEsercizi {
@@ -28,16 +27,17 @@ public class CicliEsercizi {
 	int numero = sc.nextInt();
 	stampaInLettere(numero);
 	
-	//Esercizio #3
+	/*//Esercizio #3
 	System.out.println("Esercizo 3 ->");
 	System.out.println("----------------");
 	System.out.print("Insert a letter or word:");
 	sc.nextLine();
-	String str1 = sc.nextLine();
-	untilReachQ(str1);
+	String str1 = sc.nextLine();*/
+	untilReachQ();
 	
 	
 	//Esercizio #4
+	
 	System.out.println("Esercizo 4 ->");
 	System.out.println("----------------");
 	System.out.print("Insert a number:");
@@ -54,12 +54,11 @@ public class CicliEsercizi {
 	
 	public static void annoBisestile(int anno) {
 		if(anno % 4 == 0) {
-			if(anno % 100 == 0) {
-				if(anno % 400 == 0) {
+			System.out.println(true);
+		}else if(anno % 100 == 0 && anno % 400 == 0) {
 					System.out.println(true);
-				}
 			}
-		}else System.out.println(false);
+		else System.out.println(false);
 	}
 	
 	//Esercizio #2
@@ -74,15 +73,37 @@ public class CicliEsercizi {
 	}
 	
 	//Esercizio #3
-	public static void untilReachQ(String str) {
+	/*public static void untilReachQ(String str) {
 		int i = 0;
 		char[] charArr = str.toCharArray();
-		String arrStr = Arrays.toString(charArr);
-		while (charArr[i] != 'q'){
+	    String arrStr = Arrays.toString(charArr);
+		do {
 			System.out.println(arrStr);
 			i++;
-		};
+		}while (i < charArr.length && charArr[i] != 'q');
 		
+	}
+	*/
+	public static void untilReachQ() {
+		Scanner sc = new Scanner(System.in);
+		 String str;
+		 while (true) {
+	            System.out.print("Insert a string :q to exit: ");
+	            str = sc.nextLine();
+
+	            if (str.equals(":q")) {
+	                break;
+	            }
+	            for (int i = 0; i < str.length(); i++) {
+	                System.out.print(str.charAt(i));
+	                if (i != str.length() - 1) {
+	                    System.out.print(", ");
+	                }
+	            }
+
+	            System.out.println();
+	        }
+	      
 	}
 	
 	//Esercizio #4
