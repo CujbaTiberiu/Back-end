@@ -46,8 +46,8 @@ public class MainClass {
 		
 		public static void showImg() {
 			
-			String img = "immagine";
-			ArrayVuoto(listaAudio, img);
+			//String img = "immagine";
+			//ArrayVuoto(listaImg, img);
 			
 			System.out.print("Scegli un'immagine da visualizzare 1 a 5 oppure 0 per tornare al Menu: ");
 			
@@ -66,7 +66,7 @@ public class MainClass {
 								 int volDim = sc.nextInt();
 								im.dimLum(volDim);
 								im.Mostra();
-								System.out.print("Insrisci 0 per tornare al menu! ");
+								System.out.print("Inserisci 0 per tornare al menu! ");
 								int scelto = sc.nextInt();
 								if(scelto == 0) {
 									Menu();
@@ -207,7 +207,7 @@ public class MainClass {
 			case 4: playAudio();break;
 			case 5: playVideo();break;
 			case 6: showImg();break;
-			default: System.out.println("Inserisci un numero tra 1 e 6 inclusi per accedere alle funzionalità del menu!");
+			default: System.out.println("Inserisci un numero tra 1 e 6 inclusi per accedere alle funzionalità del menu!"); Menu();
 			}
 		}
 	
