@@ -1,7 +1,7 @@
 package w1.compito;
 
 public abstract class ElementoMultimediale {
-	private String titolo;
+	public String titolo;
 	
 	public ElementoMultimediale(String titolo) {
 		this.setTitolo(titolo);

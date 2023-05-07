@@ -26,16 +26,8 @@ public class eVideo extends ElementoMultimediale implements VolRipro,gestisciLum
 
 	@Override
 	public void Riproduci() {
-		for(int i = 0; i< this.durata; i++ ) {
-			System.out.println(super.getTitolo());
-		}
-		for(int j = 0; j< this.volume; j++ ) {
-			System.out.println("!");
-		}
-		for(int k = 0; k< this.luminosita; k++ ) {
-			System.out.println("*");
-		}
-		
+		System.out.println("Video in esecuzione");
+		System.out.println("Titolo video: " + super.getTitolo().repeat(this.durata) + " - " + "Volume video: " + "!".repeat(this.volume)+ " - " + "Luminosità video: " + "*".repeat(this.luminosita));
 	}
 
 	@Override

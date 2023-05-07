@@ -9,14 +9,8 @@ public class eImage extends ElementoMultimediale implements gestisciLuminosita{
 	}
 
 	public void Mostra() {
-		System.out.println("Audio in esecuzione");
-		for(int i = 0; i< this.luminosita; i++ ) {
-			System.out.println(super.getTitolo());
-		}
-		for(int j = 0; j< this.luminosita; j++ ) {
-			System.out.println("*");
-		}
-		
+	    System.out.println("Immagine in mostra");
+	    System.out.println("Titolo immagine: " + this.getTitolo() + " - " + "Luminosità immagine: " + "*".repeat(this.luminosita));
 	}
 
 	@Override

@@ -19,10 +19,11 @@ public class MainClass {
 	
 	static public void Menu() {
 		System.out.println("Ciao!");
-		System.out.println("--- Opzioni carica file ---");
+		System.out.println("--- Opzioni caricamento file ---");
 		System.out.println("[1] Carica 5 file Audio");
 		System.out.println("[2] Carica 5 file Video");
 		System.out.println("[3] Carica 5 file Immagine");
+		System.out.println("--- Opzioni riproduzione file ---");
 		System.out.println("[4] Riproduci audio già caricati");
 		System.out.println("[5] Riproduci video già caricati");
 		System.out.println("[6] Mostra immagini già caricate");
@@ -46,8 +47,8 @@ public class MainClass {
 		
 		public static void showImg() {
 			
-			//String img = "immagine";
-			//ArrayVuoto(listaImg, img);
+			String img = "immagine";
+			ArrayVuoto(listaImg, img);
 			
 			System.out.print("Scegli un'immagine da visualizzare 1 a 5 oppure 0 per tornare al Menu: ");
 			
@@ -75,8 +76,6 @@ public class MainClass {
 				
 					}
 			 }
-			
-		
 	}
 		
 		public static void aggAudio() {
@@ -146,7 +145,7 @@ public class MainClass {
 		
 		public static void playVideo() {
 			String video = "video";
-			ArrayVuoto(listaAudio, video);
+			ArrayVuoto(listaVideo, video);
 			
 			System.out.print("Scegli un file video da riprodurre 1 a 5 oppure 0 per tornare al Menu : ");
 			 int videoScelto = sc.nextInt();
@@ -182,18 +181,15 @@ public class MainClass {
 		
 			
 		public static void ArrayVuoto(ElementoMultimediale[] arr, String nome ) {
-			boolean arrayVuoto = true;
 		    for (int i = 0; i < arr.length; i++) {
-		        if (listaAudio[i] != null) {
-		        	arrayVuoto = false;
-		            break;
-		        }
+		        if (arr[i] != null) {
+		        	return;
+		        }else{
+			        System.out.println("Prima inserisci file " + nome);
+			        Menu();
+			    }
 		    }
-		    if (arrayVuoto) {
-		        System.out.println("Primi inserisci file " + nome);
-		        Menu();
-		        return;
-		    }
+		    
 		}
 		
 		

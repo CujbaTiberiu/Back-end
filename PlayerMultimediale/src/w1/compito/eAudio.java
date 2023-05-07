@@ -24,13 +24,8 @@ public class eAudio extends ElementoMultimediale implements VolRipro{
 
 	@Override
 	public void Riproduci() {
-		for(int i = 0; i< this.durata; i++ ) {
-			System.out.println(super.getTitolo());
-		}
-		for(int j = 0; j< this.volume; j++ ) {
-			System.out.println("!");
-		}
-		
+		System.out.println("Audio in esecuzione");
+		System.out.println("Titolo audio: " + super.getTitolo().repeat(this.durata) + " - " + "Volume audio: " + "!".repeat(this.volume));
 	}
 
 }
