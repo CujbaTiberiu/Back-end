@@ -25,11 +25,11 @@ public class MainProject {
 		//Esercizio #2
 		try {
 			mediaConsumo();
-		} catch (MyExcpetion e) {
-			System.out.println(e.getMessage().toString());
-			mediaConsumo();
 		}catch(NumberFormatException e) {
-			System.out.println("Numero '0' non accettato, inserire numero valido!");
+			System.out.println("Inserire numero valido!");
+			mediaConsumo();
+		}catch(ArithmeticException  e) {
+			System.out.println("Inserire numero valido diverso da '0'!");
 			mediaConsumo();
 		}
 	}
@@ -72,12 +72,9 @@ public class MainProject {
 		int num1 = Integer.parseInt(sc.nextLine());
 		System.out.println("Inserisci la quantità di carburante consumata: ");
 		int num2 = Integer.parseInt(sc.nextLine());
-		if(num1 == 0 || num2 == 0) {
-			throw new MyExcpetion("Numero inserito deve essere diverso da 0!");
-		}else {
 		System.out.println("Media km/lt carburante: " + (num1/num2) + "km con 1 litro");
 		}
-	}
+	
 	
 	
 	
