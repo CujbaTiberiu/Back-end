@@ -7,36 +7,27 @@ public class MainProject {
 
 	//Esercizio #1
 	static Scanner  sc = new Scanner(System.in);
-	//static int num = Integer.parseInt(sc.nextLine());
+	
 	static int[] arrNumCas = new int[5];
 	
 	
-	public static void main(String[] args) throws MyExcpetion{
-		//try {
-			//aggiungiArr();
-			//aggiornaArr();
-		//} catch (MyExcpetion e) {
-			//System.out.println(e.getMessage().toString());
-		//}catch(NumberFormatException e) {
-			//System.out.println("Formatto non accettato, inserire numeri!");
-			//aggiungiArr();
-		//}
+	public static void main(String[] args) throws MyExcpetion {
+		try {
+			aggiungiArr();
+			aggiornaArr();
+		} catch (MyExcpetion e) {
+			System.out.println(e.getMessage().toString());
+		}catch(NumberFormatException e) {
+			System.out.println("Formatto non accettato, inserire numeri!");
+			aggiungiArr();
+		}
 		
 		//Esercizio #2
-		try {
-			mediaConsumo();
-		}catch(NumberFormatException e) {
-			System.out.println("Inserire numero valido!");
-			mediaConsumo();
-		}catch(ArithmeticException  e) {
-			System.out.println("Inserire numero valido diverso da '0'!");
-			mediaConsumo();
+		mediaConsumo();	
 		}
-	}
-	
-
 	//Esercizio #1
 	public static void aggiungiArr() throws MyExcpetion {
+		
 			System.out.println("Inserisci il primo numero: ");
 			int num1 = Integer.parseInt(sc.nextLine());
 			System.out.println("Inserisci il secondo numero: ");
@@ -55,31 +46,40 @@ public class MainProject {
 	}
 	
 	
-	public static void aggiornaArr() {
+	public static void aggiornaArr(){
+		
 		for(int i = 0; i < arrNumCas.length; i++) {
-			System.out.println("Inserisci un numero per cambiare il numero alla posizione " + i);
-			//arrNumCas[i] = num;
+			int num = Integer.parseInt(sc.nextLine());
+			if( num != 0){
+				try {
+					System.out.println("Inserisci un numero per cambiare il numero alla posizione " + i);
+					arrNumCas[i] = num;
+				}catch (ArithmeticException  e){
+				System.out.println(e.getMessage().toString());
+			}
 		}
 		System.out.println("Array attuale: " + Arrays.toString(arrNumCas));
 	}
+	}
+	
 	
 	
 	
 	//Esercizio #2
 	
-	public static void mediaConsumo()  throws MyExcpetion{
-		System.out.println("Inserisci i km percorsi: ");
-		int num1 = Integer.parseInt(sc.nextLine());
-		System.out.println("Inserisci la quantità di carburante consumata: ");
-		int num2 = Integer.parseInt(sc.nextLine());
-		System.out.println("Media km/lt carburante: " + (num1/num2) + "km con 1 litro");
-		}
+	public static void mediaConsumo(){
+			System.out.println("Inserisci i km percorsi: ");
+			int num1 = Integer.parseInt(sc.nextLine());
+			System.out.println("Inserisci la quantità di carburante consumata: ");
+			int num2 = Integer.parseInt(sc.nextLine());
+			try {
+				System.out.println("Media km/lt carburante: " + (num1/num2) + "km con 1 litro");
+				
+			} catch (ArithmeticException e) {
+				System.out.println("Non può essere divisibile per '0'");
+			}
+			
 	
+	}
+	}
 	
-	
-	
-	
-	
-	
-	
-}
