@@ -1,0 +1,47 @@
+14:33:05.622 [main] INFO  parola1
+14:33:05.634 [main] INFO  parola2
+14:35:40.979 [main] INFO  p1
+14:35:40.990 [main] INFO  p2
+14:35:40.991 [main] INFO  p3
+14:36:04.881 [main] INFO  p1
+14:36:04.891 [main] INFO  p2
+14:36:04.892 [main] INFO  p3
+14:36:04.892 [main] INFO  p4
+14:36:04.892 [main] INFO  p5
+14:43:16.705 [main] INFO  Duplicati: p2
+14:44:46.123 [main] INFO  Duplicati: p2
+14:44:46.136 [main] INFO  Array: p1
+14:44:46.136 [main] INFO  Array: p2
+14:44:46.136 [main] INFO  Array: p3
+14:47:19.173 [main] INFO  Duplicati: p2
+14:47:19.185 [main] INFO  Duplicati: p3
+14:47:19.185 [main] INFO  Numero parole: 4
+14:47:19.186 [main] INFO  Array: p1
+14:47:19.187 [main] INFO  Array: p2
+14:47:19.187 [main] INFO  Array: p3
+14:47:19.189 [main] INFO  Array: p4
+15:00:39.851 [main] INFO  Duplicati: p2
+15:00:39.862 [main] INFO  Numero parole: 3
+15:00:39.864 [main] INFO  Array: p1
+15:00:39.864 [main] INFO  Array: p2
+15:00:39.864 [main] INFO  Array: p3
+15:20:16.965 [main] INFO  87
+15:20:16.977 [main] INFO  87
+15:20:16.978 [main] INFO  87
+15:20:16.978 [main] INFO  87
+15:20:16.978 [main] INFO  87
+15:20:40.149 [main] INFO  95
+15:20:40.162 [main] INFO  42
+15:20:40.162 [main] INFO  77
+15:20:40.163 [main] INFO  5
+15:20:40.163 [main] INFO  40
+15:34:37.825 [main] INFO  22
+15:34:37.838 [main] INFO  35
+15:34:37.839 [main] INFO  38
+15:34:37.839 [main] INFO  73
+15:34:37.840 [main] INFO  100
+15:55:49.596 [main] INFO  77
+15:55:49.608 [main] INFO  67
+15:55:49.608 [main] INFO  71
+15:55:49.608 [main] INFO  38
+15:55:49.609 [main] INFO  21

@@ -1,0 +1,20 @@
+10:25:13.486 [main] INFO  COM.epicode.log.MainProject - Test log!
+10:25:13.496 [main] ERROR COM.epicode.log.MainProject - Test error!
+10:25:13.498 [main] WARN  COM.epicode.log.MainProject - Test warning!
+10:25:13.498 [main] DEBUG COM.epicode.log.MainProject - Test debug!
+10:25:58.045 [main] INFO  COM.epicode.log.MainProject - Test log!
+10:25:58.051 [main] ERROR COM.epicode.log.MainProject - Test error!
+10:25:58.051 [main] WARN  COM.epicode.log.MainProject - Test warning!
+10:25:58.051 [main] DEBUG COM.epicode.log.MainProject - Test debug!
+10:29:03.745 [main] INFO  COM.epicode.log.MainProject - Test log!
+10:29:03.751 [main] ERROR COM.epicode.log.MainProject - Test error!
+10:29:03.751 [main] WARN  COM.epicode.log.MainProject - Test warning!
+10:29:03.753 [main] DEBUG COM.epicode.log.MainProject - Test debug!
+10:29:37.166 [main] INFO  COM.epicode.log.MainProject - Test log!
+10:29:37.172 [main] ERROR COM.epicode.log.MainProject - Test error!
+10:29:37.172 [main] WARN  COM.epicode.log.MainProject - Test warning!
+10:29:37.172 [main] DEBUG COM.epicode.log.MainProject - Test debug!
+10:38:14.900 [main] INFO  Test log!
+10:38:14.905 [main] ERROR Test error!
+10:38:14.905 [main] WARN  Test warning!
+10:38:14.905 [main] DEBUG Test debug!
