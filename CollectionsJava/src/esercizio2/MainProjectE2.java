@@ -45,7 +45,7 @@ public class MainProjectE2 {
 	}
 	
 	public static void stampaPariDispari(List<Integer> arr, boolean b) {
-			if(b) {
+			if(b) {//si poteva usare il ternary - ?
 				for(int i = 0; i < arr.size(); i += 2) {
 					int val = arr.get(i);
 					 System.out.println("Valore a indice pari " + i + ": " + val);

@@ -45,3 +45,40 @@
 15:55:49.608 [main] INFO  71
 15:55:49.608 [main] INFO  38
 15:55:49.609 [main] INFO  21
+16:53:50.783 [main] INFO  Duplicati: p3
+16:53:50.788 [main] INFO  Duplicati: p4
+16:53:50.788 [main] INFO  Numero parole: 4
+16:53:50.788 [main] INFO  Array: p1
+16:53:50.788 [main] INFO  Array: p2
+16:53:50.788 [main] INFO  Array: p3
+16:53:50.788 [main] INFO  Array: p4
+16:56:08.094 [main] INFO  Duplicati: p2
+16:56:08.098 [main] INFO  Numero parole: 3
+16:56:08.099 [main] INFO  Array: {}p1
+16:56:08.099 [main] INFO  Array: {}p2
+16:56:08.099 [main] INFO  Array: {}p3
+16:56:39.352 [main] INFO  Duplicati: parolaa
+16:56:39.356 [main] INFO  Numero parole: 3
+16:56:39.357 [main] INFO  Array: parolaa
+16:56:39.357 [main] INFO  Array: parola
+16:56:39.357 [main] INFO  Array: parole
+17:04:15.032 [main] INFO  3
+17:04:15.038 [main] INFO  57
+17:04:15.038 [main] INFO  53
+17:04:15.039 [main] INFO  27
+17:04:15.039 [main] INFO  23
+17:04:34.746 [main] INFO  42
+17:04:34.751 [main] INFO  55
+17:04:34.751 [main] INFO  29
+17:04:34.751 [main] INFO  90
+17:04:34.751 [main] INFO  65
+17:21:41.691 [main] ERROR 0 - non valido!
+17:21:41.755 [main] INFO  Numero parole: 0
+17:21:57.694 [main] ERROR 0 - non valido!
+17:21:57.767 [main] INFO  Numero parole: 0
+17:31:58.611 [main] INFO  Numero parole: 3
+17:49:35.085 [main] INFO  46
+17:49:35.091 [main] INFO  65
+17:49:35.092 [main] INFO  88
+17:49:35.092 [main] INFO  80
+17:49:35.092 [main] INFO  39

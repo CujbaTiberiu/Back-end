@@ -18,22 +18,32 @@ public class MainProjectE1 {
 	}
 	
 	public static void insertNumber() {
+		boolean continua = true;
 		Set<String> arrStr = new HashSet<String>();
 		Set<String> duplicates = new HashSet<String>();
-		System.out.println("Inserisci un numero: ");
+		do {
+			
+		System.out.println("Inserisci un numero di parole da inserire oppure '0' per terminare: ");
 		int quanteVolte = Integer.parseInt(sc.nextLine());
-		for(int i = 0; i < quanteVolte; i++) {
-			System.out.println("Inserisci una parola " + (i+1) + " : ");
-			String str = sc.nextLine();
-			if(!arrStr.add(str)) {
-				duplicates.add(str);
+		if(quanteVolte == 0) {
+			//log.error("0 - non valido!");
+			continua = false;
+		}else {
+			for(int i = 0; i < quanteVolte; i++) {
+				System.out.println("Inserisci una parola " + (i+1) + " : ");
+				String str = sc.nextLine();
+				if(!arrStr.add(str)) {
+					duplicates.add(str);
+				}
 			}
 		}
-		duplicates.forEach(e -> log.info("Duplicati: " + e));
-		int size = arrStr.size();
-		log.info("Numero parole: " + size);
-		arrStr.forEach(e -> log.info("Array: " + e));
 		
+		duplicates.forEach(e -> System.out.println("Duplicati: " + e));
+		int size = arrStr.size();
+		System.out.println("Numero parole: " + size);
+		System.out.println("Elenco parole: ");
+		arrStr.forEach(e ->  System.out.println(" - " + e));
+		} while(continua);
 	}
 	
 	
