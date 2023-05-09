@@ -8,9 +8,13 @@ public class MainProjectE3 {
 	public static void main(String[] args) {
 		
 		contactsMap();
+		
 		returnKey(elenco, "3879663255");
+		
 		returnValue(elenco, "Joe Rogan");
-		System.out.println(elenco);
+		
+		printAll(elenco);
+		
 	}
 	
 	public static void contactsMap() {
@@ -44,6 +48,12 @@ public class MainProjectE3 {
 	            System.out.println("Il numero è (value): " + entry.getValue());
 	        }
 	}
+	}
+	
+	public static void printAll(Map<String, String> e) {
+		for (Entry<String, String> entry : e.entrySet()) {
+			System.out.println("Name: " + entry.getKey() + " - " + "Number: " + entry.getValue());
+		}
 	}
 	
 	
