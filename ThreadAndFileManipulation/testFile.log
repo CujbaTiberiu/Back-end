@@ -142,3 +142,29 @@
 16:39:27.793 [thread da 0 - 1000] INFO  Sum: 1523972
 16:39:27.798 [thread da 1000 - 2000] INFO  Sum: 1517288
 16:39:27.798 [thread da 2000 - 3000] INFO  Sum: 1515577
+16:41:59.011 [Thread*] INFO  N: 1 *
+16:41:59.011 [Thread#] INFO  N: 1 #
+16:42:00.028 [Thread#] INFO  N: 2 #
+16:42:00.028 [Thread*] INFO  N: 2 *
+16:42:01.041 [Thread#] INFO  N: 3 #
+16:42:01.041 [Thread*] INFO  N: 3 *
+16:42:02.053 [Thread#] INFO  N: 4 #
+16:42:02.053 [Thread*] INFO  N: 4 *
+16:42:03.065 [Thread*] INFO  N: 5 *
+16:42:03.065 [Thread#] INFO  N: 5 #
+16:42:04.075 [Thread#] INFO  N: 6 #
+16:42:04.075 [Thread*] INFO  N: 6 *
+16:42:05.084 [Thread#] INFO  N: 7 #
+16:42:05.084 [Thread*] INFO  N: 7 *
+16:42:06.091 [Thread#] INFO  N: 8 #
+16:42:06.091 [Thread*] INFO  N: 8 *
+16:42:07.100 [Thread*] INFO  N: 9 *
+16:42:07.100 [Thread#] INFO  N: 9 #
+16:42:08.108 [Thread#] INFO  N: 10 #
+16:42:08.108 [Thread*] INFO  N: 10 *
+16:42:23.500 [thread da 0 - 1000] INFO  Sum: 1541285
+16:42:23.506 [thread da 1000 - 2000] INFO  Sum: 1524324
+16:42:23.507 [thread da 2000 - 3000] INFO  Sum: 1479393
+16:43:12.774 [thread da 0 - 1000] INFO  Sum: 4525
+16:43:12.779 [thread da 1000 - 2000] INFO  Sum: 4623
+16:43:12.779 [thread da 2000 - 3000] INFO  Sum: 4454

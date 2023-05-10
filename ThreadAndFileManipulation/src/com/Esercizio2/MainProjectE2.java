@@ -45,7 +45,7 @@ public class MainProjectE2 {
 	public static void numCas() {
 		Random random = new Random();
 		for(int i = 0; i < 3001; i++) {
-			int randomNumber = random.nextInt(3001);
+			int randomNumber = random.nextInt(10);
 			mainArr.add(randomNumber);
 		}
 		
