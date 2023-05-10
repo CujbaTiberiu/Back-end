@@ -11,7 +11,7 @@ public class MainProjectE2 {
 	static List<Integer> mainArr = new ArrayList<Integer>();
 	
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		numCas();
 		//System.out.println(mainArr.toString());
@@ -31,6 +31,14 @@ public class MainProjectE2 {
 		//System.out.println(arr3.toString());
 		
 		mt1.start();
+		mt1.join();
+		mt2.start();
+		mt2.join();
+		mt3.start();
+		mt3.join();
+		
+		MultiThread.mainSomma();
+		
 		
 	}
 	
