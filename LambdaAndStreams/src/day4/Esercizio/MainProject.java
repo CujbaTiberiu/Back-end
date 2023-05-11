@@ -49,6 +49,16 @@ public class MainProject {
 		ordini.forEach(o -> System.out.println(o));
 		
 		
+		//Esercizio #3
+		prodotti.add(new Product(2909931, "Play Station 5", "Boys", 650));
+		prodotti.add(new Product(2909932, "Shootgun", "Boys", 200));
+		prodotti.add(new Product(2909933, "Beer", "Boys", 10));
+		prodotti.add(new Product(2909934, "Snacks", "Boys", 5));
+		prodotti.add(new Product(2909935, "More beer", "Boys", 20));
+		
+		List<Product> prodBoysScontati = applicaSconto(prodotti, "Boys");
+		System.out.println("--- Esercizio 3 ---");
+		prodBoysScontati.forEach(p -> System.out.println(p));
 		
 	}
 	
@@ -60,7 +70,18 @@ public class MainProject {
 		
 	}
 	
-	//Esercizio #2
-	
+	//Esercizio #3
+	public static List<Product> applicaSconto(List<Product> prodotti, String categoria) {
+	    return prodotti.stream()
+	            .filter(p -> p.getCategory().equals(categoria))
+	            .map(p -> {
+	                double discountBoys = p.getPrice() - (p.getPrice() * 10) / 100;
+	                p.setPrice(discountBoys);
+	                return p;
+	            })
+	            .collect(Collectors.toList());
+	}
 
 }
+
+
