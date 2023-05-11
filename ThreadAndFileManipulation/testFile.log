@@ -168,3 +168,9 @@
 16:43:12.774 [thread da 0 - 1000] INFO  Sum: 4525
 16:43:12.779 [thread da 1000 - 2000] INFO  Sum: 4623
 16:43:12.779 [thread da 2000 - 3000] INFO  Sum: 4454
+17:13:11.568 [thread da 0 - 1000] INFO  Sum: 4557
+17:13:11.578 [thread da 1000 - 2000] INFO  Sum: 4474
+17:13:11.579 [thread da 2000 - 3000] INFO  Sum: 4536
+17:25:22.885 [thread da 0 - 1000] INFO  Somma: 4446
+17:25:22.892 [thread da 1000 - 2000] INFO  Somma: 4422
+17:25:22.893 [thread da 2000 - 3000] INFO  Somma: 4484

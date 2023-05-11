@@ -6,24 +6,30 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.Esercizio1.Thread1;
 
 public class MainProjectE3 {
 	
 	static File fileRegistro = new File("registro/RegistroPresenze.txt");
 	static  Map<String, String> elenco = new HashMap<String, String>();
+	private static Logger log = LoggerFactory.getLogger(Thread1.class);
 	
 
 	public static void main(String[] args) {
 	
-		elenco.put("Mario Rossi@", "5#");
-		elenco.put("Giorgio Bianchi@", "6#");
-		elenco.put("Gianni Verdi@", "2#");
+		elenco.put("Mario Rossi@","5#");
+		elenco.put("Giorgio Bianchi@","6#");
+		elenco.put("Gianni Verdi@","2#");
 		
 		try {
-			scriviSuFile();
+			//scriviSuFile();
 			String vediFile = leggiDaFile();
 			System.out.print(vediFile);
 		} catch (IOException e) {
+			log.error("Errore IOException" + e.getMessage());
 			e.printStackTrace();
 		}
 	}

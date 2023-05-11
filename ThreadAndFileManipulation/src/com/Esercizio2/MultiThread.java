@@ -22,7 +22,7 @@ public class MultiThread extends Thread{
 	@Override
 	public void run() {
 		int somma = sommaArr(numeri);
-		log.info("Sum: " + somma);
+		log.info("Somma: " + somma);
 		arrSomme.add(somma);
 	}
 	
