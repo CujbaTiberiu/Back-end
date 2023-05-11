@@ -12,11 +12,11 @@ public class Order {
 	private List<Product> products;
 	private Customer customer;
 	
-	public Order(long id, String status, LocalDate orderDate, List<Product> products,
+	public Order(long id, String status, LocalDate orderDate, LocalDate deliveryDate,List<Product> products,
 			Customer customer) {
 		this.id = id;
 		this.status = status;
-		this.orderDate = LocalDate.now();
+		this.orderDate = null;
 		this.deliveryDate = null;
 		this.products = products;
 		this.customer = customer;
@@ -39,20 +39,21 @@ public class Order {
 		this.status = status;
 	}
 
+
 	public LocalDate getOrderDate() {
 		return orderDate;
 	}
 
-	public void setOrderDate(LocalDate orderDate) {
-		this.orderDate = orderDate;
+	public void setOrderDate(int day, int month, int year) {
+		this.orderDate = LocalDate.of(year, month, day);
 	}
 
 	public LocalDate getDeliveryDate() {
 		return deliveryDate;
 	}
 
-	public void setDeliveryDate(LocalDate deliveryDate) {
-		this.deliveryDate = deliveryDate;
+	public void setDeliveryDate(int day, int month, int year) {
+		this.deliveryDate = LocalDate.of(year, month, day);
 	}
 
 	public List<Product> getProducts() {
@@ -77,6 +78,9 @@ public class Order {
 		return "Order [id=" + id + ", status=" + status + ", orderDate=" + orderDate + ", deliveryDate=" + deliveryDate
 				+ ", products=" + products + ", customer=" + customer + "]";
 	}
+
+
+	
 	
 	
 

@@ -35,13 +35,24 @@ public class MainProject {
 		prodotti.add(new Product(2703331, "Triciclo", "Baby", 250));
 		
 		
-		ordini.add(new Order(1, "In preparazione", null, filtraPrezzo(prodotti, "Baby"), new Customer(1, "Emma Stone", 2)));
+		Order o1 = new Order(0, null, null, null, null, null);
+		o1.setId(1);
+		o1.setStatus("Consegnato");
+		o1.setOrderDate(1, 1, 2021);
+		o1.setDeliveryDate(6, 4, 2021);
+		o1.setProducts(filtraPrezzo(prodotti, "Baby"));
+		o1.setCustomer(new Customer(1, "Emma Stone", 2));
+		
+		ordini.add(o1);
+		
 		System.out.println("--- Esercizio 2 ---");
 		ordini.forEach(o -> System.out.println(o));
 		
 		
 		
 	}
+	
+	
 	//Esercizio #1
 	public static List<Product> filtraPrezzo(List<Product> prodotti, String categoria){
 		
