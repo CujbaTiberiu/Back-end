@@ -1,6 +1,5 @@
 package day4.Esercizio;
 
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -60,6 +59,9 @@ public class MainProject {
 		System.out.println("--- Esercizio 3 ---");
 		prodBoysScontati.forEach(p -> System.out.println(p));
 		
+		
+		List<Product> tier2Products = getProdottiTier(2, LocalDate.of(2021, 1, 1),LocalDate.of(2021, 4, 6) );
+		tier2Products.forEach(p -> System.out.println(p));
 	}
 	
 	
@@ -75,13 +77,25 @@ public class MainProject {
 	    return prodotti.stream()
 	            .filter(p -> p.getCategory().equals(categoria))
 	            .map(p -> {
-	                double discountBoys = p.getPrice() - (p.getPrice() * 10) / 100;
-	                p.setPrice(discountBoys);
+	                p.setPrice(p.getPrice() - (p.getPrice() * 10) / 100);
 	                return p;
 	            })
 	            .collect(Collectors.toList());
 	}
+	
+	//Esercizio #4
+	public static List<Product> getProdottiTier(int tier, LocalDate start, LocalDate end){
+		
+		return ordini.stream()
+				.filter(o -> o.getCustomer().getTier() == tier)
+				.filter(c -> c.getOrderDate().compareTo(start) >= 0)
+				.filter(d -> d.getDeliveryDate().compareTo(end) <= 0)
+				.flatMap(x -> x.getProducts().stream())
+				.collect(Collectors.toList());
+		
+	}
 
 }
+
 
 

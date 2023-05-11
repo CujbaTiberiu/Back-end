@@ -24,4 +24,12 @@
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="org.apache.commons.io.FileUtils"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="day4.Esercizio.Product"/>
+    <fullyQualifiedTypeName name="java.time.chrono.ChronoLocalDate"/>
+    <fullyQualifiedTypeName name="day4.Esercizio.Customer"/>
+    <fullyQualifiedTypeName name="day4.Esercizio.Order"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
 </qualifiedTypeNameHistroy>
