@@ -43,6 +43,11 @@ public class Libro extends Catalogo{
 				+ ", Autore = " + this.autore + ", Genere = " + this.genere + "]";
 	}
 	
+	@Override
+	public String toFileString() {
+		return this.getCodiceISBN() + "#" + this.getTitolo() + "#" + this.getAnnoPublicazione() + "#" + this.getNumeroPagine() + "#" 
+				+ this.autore + "#" + this.genere + "#";
+	}
 	
 
 }

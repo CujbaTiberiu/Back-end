@@ -21,6 +21,13 @@ public class Rivista extends Catalogo {
 				+ this.getNumeroPagine() +  ", periodicità = " + this.periodicità + "]";
 	}
 	
+	@Override
+	public String toFileString() {
+		return this.getCodiceISBN() + "#" + this.getTitolo() + "#" + this.getAnnoPublicazione() + "#" + this.getNumeroPagine() + "#" 
+				+ this.periodicità + "#";
+	}
+	
+	
 	
 
 }

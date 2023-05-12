@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
+
 
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
@@ -19,6 +19,7 @@ public class MainProject {
 	private static String path = "CatalogoBiblioteca/cat.txt";
 	private static File file = new File(path);
 	static List<Catalogo> catalogo = new ArrayList<Catalogo>();
+	static List<Catalogo> catalogoFile = new ArrayList<Catalogo>();
 
 	public static void main(String[] args) {
 		
@@ -26,6 +27,7 @@ public class MainProject {
 		catalogo.add(new Libro("1L", "Il trono di spade", 2015, 400,"George R.R. Martin" ,"Fantasy"));
 		catalogo.add(new Libro("2L", "Arte della guerra", 100, 600,"Sun Tzu" ,"Non-Fiction"));
 		catalogo.add(new Libro("3L", "Il signore degli Anelli", 2015, 400,"J. R. R. Tolkien" ,"Fantasy"));
+		catalogo.add(new Libro("4L", "Programmazione di base e avanzata con Java", 2018, 300,"Pearson" ,"Manuale"));
 		
 		catalogo.add(new Rivista("1R", "GamingNow", 2010, 60, Periodicità.SETTIMANALE));
 		catalogo.add(new Rivista("2R", "TechnologyTomorrow", 2002, 100, Periodicità.MENSILE));
@@ -33,30 +35,34 @@ public class MainProject {
 		
 		  log.info("--- Elenco catalogo ---");
 	    catalogo.forEach(e -> System.out.println(e));
-	    //try {
-			//scriviSuFile();
-		//} catch (IOException e1) {
-			//log.info("Scritto su file!");
-			//e1.printStackTrace();
-		//}
+	    
 	    log.info("--- Rimozione di un elemento ---");
-	    String elementoRimosso = removeElement("3L");
-	    log.info("Elemento rimosso" + elementoRimosso);
+	    log.info("Elemento rimosso" + removeElement("3L"));
 	    
 	    log.info("--- Elenco catalogo ---");
 	    catalogo.forEach(e -> System.out.println(e));
 	    
 	    log.info("--- Ricerca di un elemento per ISBN ---");
-	    String ricercaPerIsbn = findByIsbn("3R").toString();
-	    log.info("Elemento ricercato per codice ISBN" + ricercaPerIsbn);
+	    log.info("Elemento ricercato per codice ISBN -> " +  findByIsbn("3R"));
 	    
 	    log.info("--- Ricerca di un elemento per Anno pubblicazione ---");
-	    String ricercaPerAnnoPub = findByPubYear(2015).toString();
-	    log.info("Elemento ricercato per anno pubblicazione" + ricercaPerAnnoPub);
+	    log.info("Elemento ricercato per anno pubblicazione -> " +  findByPubYear(2015));
 	    
 	    log.info("--- Ricerca di un elemento per Autore ---");
-	    String ricercaPerAutore = findByAuthor("Sun Tzu").toString();
-	    log.info("Elemento ricercato per Autore" + ricercaPerAutore);
+	    log.info("Elemento ricercato per Autore -> " + findByAuthor("Sun Tzu"));
+	    
+	    try {
+	    	log.info("*** Scrivi su File ***");
+	    	writeToFile();
+	    	log.info("*** Scritto su File! ***");
+	    	log.info("*** Leggi da File ***");
+	    	readFromFile();
+	    	catalogoFile.forEach(e -> System.out.println(e));
+	    	log.info("*** fine lettura da File ***");
+		} catch (IOException e1) {
+			log.info("Scritto su file!");
+			e1.printStackTrace();
+		}
 	    
 	}
 	
@@ -74,22 +80,44 @@ public class MainProject {
 		
 	}
 	
-	public static List<Catalogo> findByIsbn(String ISBN) {
-		return catalogo.stream().filter(e -> e.getCodiceISBN().equals(ISBN)).collect(Collectors.toList());
+	public static String findByIsbn(String ISBN) {
+		List<Catalogo> ricercaPerIsbn = catalogo.stream().filter(e -> e.getCodiceISBN().equals(ISBN)).collect(Collectors.toList());
+		String ricerca = ricercaPerIsbn.toString();
+		return ricerca;
 	}
 	
-	public static List<Catalogo> findByPubYear(int year) {
-		return catalogo.stream().filter(e -> e.getAnnoPublicazione() == (year)).collect(Collectors.toList());
+	public static String findByPubYear(int year) {
+		List<Catalogo> ricercaPerAnnoPub = catalogo.stream().filter(e -> e.getAnnoPublicazione() == (year)).collect(Collectors.toList());
+		String ricerca = ricercaPerAnnoPub.toString();
+		return ricerca;
 	}
 	
-	public static List<Catalogo> findByAuthor(String autore) {
-		return catalogo.stream().filter(e -> e instanceof Libro && ((Libro)e).getAutore().equals(autore)).collect(Collectors.toList());
+	public static String findByAuthor(String autore) {
+		List<Catalogo> ricercaPerAutore = catalogo.stream().filter(e -> e instanceof Libro && ((Libro)e).getAutore().equals(autore)).collect(Collectors.toList());
+		String ricerca = ricercaPerAutore.toString();
+		return ricerca;
 	}
 	
-	public static void scriviSuFile() throws IOException {
-		FileUtils.writeStringToFile(file, catalogo.toString(), "UTF-8", true);
-		System.out.println("Testo scritto su file");
+	public static void writeToFile() throws IOException {
+		StringBuilder sb = new StringBuilder();
+	    catalogo.forEach(e -> sb.append(e.toFileString()).append("@"));
+		FileUtils.writeStringToFile(file, sb.toString(), "UTF-8", true);
+		
 	}
-
+	
+	public static void readFromFile() throws IOException{
+		String cat = FileUtils.readFileToString(file, "UTF-8");
+		String[] arr = cat.split("@");
+		for (int i = 0; i < arr.length; i++) {
+			String[] el = arr[i].split("#");
+			if (el[0].substring(1).equals("L")) {
+	            Catalogo e = new Libro(el[0], el[1], Integer.parseInt(el[2]), Integer.parseInt(el[3]), el[4], el[5]);
+	            catalogoFile.add(e);
+	        } else if(el[0].substring(1).equals("R")){
+	            Catalogo e = new Rivista(el[0], el[1], Integer.parseInt(el[2]), Integer.parseInt(el[3]), Periodicità.valueOf(el[4]));
+	            catalogoFile.add(e);
+			}
+		}
+	}
 
 }

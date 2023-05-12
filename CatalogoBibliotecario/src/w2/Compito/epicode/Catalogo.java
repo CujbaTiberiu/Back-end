@@ -53,8 +53,13 @@ public abstract class  Catalogo {
 
 	@Override
 	public String toString() {
-		return "Catalogo [codiceISBN = " + codiceISBN + ", titolo = " + titolo + ", annoPublicazione = " + annoPublicazione
-				+ ", numeroPagine = " + numeroPagine + "]";
+		return "Catalogo [codiceISBN = " + codiceISBN + ", titolo = " + titolo + ", annoPublicazione= " + annoPublicazione
+				+ ", numeroPagine=" + numeroPagine + "]";
+	}
+	
+	
+	public String toFileString() {
+		return codiceISBN + "#" + titolo + "#" +annoPublicazione + "#" + numeroPagine + "#" ;
 	}
 	
 	
