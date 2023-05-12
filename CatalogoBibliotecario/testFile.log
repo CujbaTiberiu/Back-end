@@ -1,0 +1,83 @@
+14:26:29.039 [main] INFO  Elemento rimossoLibro [ CodiceISBN = 3L, Titolo = Il signore degli Anelli, AnnoPublicazione = 2015, NumeroPagine = 400, Autore = J. R. R. Tolkien, Genere = Fantasy]
+14:37:10.544 [main] INFO  Elemento rimossoLibro [ CodiceISBN = 3L, Titolo = Il signore degli Anelli, AnnoPublicazione = 2015, NumeroPagine = 400, Autore = J. R. R. Tolkien, Genere = Fantasy]
+14:37:10.551 [main] INFO  Elemento ricercato[Rivista [ CodiceISBN = 3R, Titolo = MotorShow, AnnoPublicazione = 2006, NumeroPagine = 150, periodicità = SEMESTRALE]]
+14:39:03.424 [main] INFO  --- Elementi aggiunti ---
+14:39:03.431 [main] INFO  --- Rimozione di un elemento ---
+14:39:03.433 [main] INFO  Elemento rimossoLibro [ CodiceISBN = 3L, Titolo = Il signore degli Anelli, AnnoPublicazione = 2015, NumeroPagine = 400, Autore = J. R. R. Tolkien, Genere = Fantasy]
+14:39:03.435 [main] INFO  --- Ricerca di un elemento ---
+14:39:03.435 [main] INFO  Elemento ricercato[Rivista [ CodiceISBN = 3R, Titolo = MotorShow, AnnoPublicazione = 2006, NumeroPagine = 150, periodicità = SEMESTRALE]]
+14:39:21.780 [main] INFO  --- Elementi aggiunti ---
+14:39:21.787 [main] INFO  --- Rimozione di un elemento ---
+14:39:21.788 [main] INFO  Elemento rimossoLibro [ CodiceISBN = 3L, Titolo = Il signore degli Anelli, AnnoPublicazione = 2015, NumeroPagine = 400, Autore = J. R. R. Tolkien, Genere = Fantasy]
+14:39:21.788 [main] INFO  --- Ricerca di un elemento ---
+14:39:21.789 [main] INFO  Elemento ricercato[Rivista [ CodiceISBN = 3R, Titolo = MotorShow, AnnoPublicazione = 2006, NumeroPagine = 150, periodicità = SEMESTRALE]]
+14:40:08.209 [main] INFO  --- Elementi aggiunti ---
+14:40:08.216 [main] INFO  --- Elenco catalogo ---
+14:40:08.217 [main] INFO  --- Rimozione di un elemento ---
+14:40:08.218 [main] INFO  Elemento rimossoLibro [ CodiceISBN = 3L, Titolo = Il signore degli Anelli, AnnoPublicazione = 2015, NumeroPagine = 400, Autore = J. R. R. Tolkien, Genere = Fantasy]
+14:40:08.218 [main] INFO  --- Elenco catalogo ---
+14:40:08.219 [main] INFO  --- Ricerca di un elemento ---
+14:40:08.219 [main] INFO  Elemento ricercato[Rivista [ CodiceISBN = 3R, Titolo = MotorShow, AnnoPublicazione = 2006, NumeroPagine = 150, periodicità = SEMESTRALE]]
+14:45:12.690 [main] INFO  --- Elenco catalogo ---
+14:45:12.697 [main] INFO  --- Rimozione di un elemento ---
+14:45:12.699 [main] INFO  Elemento rimossoLibro [ CodiceISBN = 3L, Titolo = Il signore degli Anelli, AnnoPublicazione = 2015, NumeroPagine = 400, Autore = J. R. R. Tolkien, Genere = Fantasy]
+14:45:12.700 [main] INFO  --- Elenco catalogo ---
+14:45:12.700 [main] INFO  --- Ricerca di un elemento ---
+14:45:12.701 [main] INFO  Elemento ricercato per codice ISBN[Rivista [ CodiceISBN = 3R, Titolo = MotorShow, AnnoPublicazione = 2006, NumeroPagine = 150, periodicità = SEMESTRALE]]
+14:45:12.702 [main] INFO  Elemento ricercato per anno pubblicazione[Libro [ CodiceISBN = 1L, Titolo = Il trono di spade, AnnoPublicazione = 2015, NumeroPagine = 400, Autore = George R.R. Martin, Genere = Fantasy]]
+14:46:07.298 [main] INFO  --- Elenco catalogo ---
+14:46:07.305 [main] INFO  --- Rimozione di un elemento ---
+14:46:07.307 [main] INFO  Elemento rimossoLibro [ CodiceISBN = 3L, Titolo = Il signore degli Anelli, AnnoPublicazione = 2015, NumeroPagine = 400, Autore = J. R. R. Tolkien, Genere = Fantasy]
+14:46:07.307 [main] INFO  --- Elenco catalogo ---
+14:46:07.308 [main] INFO  --- Ricerca di un elemento per ISBN ---
+14:46:07.308 [main] INFO  Elemento ricercato per codice ISBN[Rivista [ CodiceISBN = 3R, Titolo = MotorShow, AnnoPublicazione = 2006, NumeroPagine = 150, periodicità = SEMESTRALE]]
+14:46:07.308 [main] INFO  --- Ricerca di un elemento per Anno pubblicazione ---
+14:46:07.309 [main] INFO  Elemento ricercato per anno pubblicazione[Libro [ CodiceISBN = 1L, Titolo = Il trono di spade, AnnoPublicazione = 2015, NumeroPagine = 400, Autore = George R.R. Martin, Genere = Fantasy]]
+14:46:32.353 [main] INFO  --- Elenco catalogo ---
+14:46:32.359 [main] INFO  --- Rimozione di un elemento ---
+14:46:32.360 [main] INFO  Elemento rimossoLibro [ CodiceISBN = 3L, Titolo = Il signore degli Anelli, AnnoPublicazione = 2015, NumeroPagine = 400, Autore = J. R. R. Tolkien, Genere = Fantasy]
+14:46:32.361 [main] INFO  --- Elenco catalogo ---
+14:46:32.361 [main] INFO  --- Ricerca di un elemento per ISBN ---
+14:46:32.361 [main] INFO  Elemento ricercato per codice ISBN[Rivista [ CodiceISBN = 3R, Titolo = MotorShow, AnnoPublicazione = 2006, NumeroPagine = 150, periodicità = SEMESTRALE]]
+14:46:32.361 [main] INFO  --- Ricerca di un elemento per Anno pubblicazione ---
+14:46:32.362 [main] INFO  Elemento ricercato per anno pubblicazione[]
+14:58:42.263 [main] INFO  --- Elenco catalogo ---
+14:58:42.269 [main] INFO  --- Rimozione di un elemento ---
+14:58:42.271 [main] INFO  Elemento rimossoLibro [ CodiceISBN = 3L, Titolo = Il signore degli Anelli, AnnoPublicazione = 2015, NumeroPagine = 400, Autore = J. R. R. Tolkien, Genere = Fantasy]
+14:58:42.271 [main] INFO  --- Elenco catalogo ---
+14:58:42.271 [main] INFO  --- Ricerca di un elemento per ISBN ---
+14:58:42.272 [main] INFO  Elemento ricercato per codice ISBN[Rivista [ CodiceISBN = 3R, Titolo = MotorShow, AnnoPublicazione = 2006, NumeroPagine = 150, periodicità = SEMESTRALE]]
+14:58:42.272 [main] INFO  --- Ricerca di un elemento per Anno pubblicazione ---
+14:58:42.273 [main] INFO  Elemento ricercato per anno pubblicazione[]
+14:58:42.273 [main] INFO  --- Ricerca di un elemento per Autore ---
+14:58:42.273 [main] INFO  Elemento ricercato per Autore[]
+15:01:26.706 [main] INFO  --- Elenco catalogo ---
+15:01:26.712 [main] INFO  --- Rimozione di un elemento ---
+15:01:26.714 [main] INFO  Elemento rimossoLibro [ CodiceISBN = 3L, Titolo = Il signore degli Anelli, AnnoPublicazione = 2015, NumeroPagine = 400, Autore = J. R. R. Tolkien, Genere = Fantasy]
+15:01:26.714 [main] INFO  --- Elenco catalogo ---
+15:01:26.715 [main] INFO  --- Ricerca di un elemento per ISBN ---
+15:01:26.715 [main] INFO  Elemento ricercato per codice ISBN[Rivista [ CodiceISBN = 3R, Titolo = MotorShow, AnnoPublicazione = 2006, NumeroPagine = 150, periodicità = SEMESTRALE]]
+15:01:26.715 [main] INFO  --- Ricerca di un elemento per Anno pubblicazione ---
+15:01:26.716 [main] INFO  Elemento ricercato per anno pubblicazione[]
+15:01:26.716 [main] INFO  --- Ricerca di un elemento per Autore ---
+15:01:26.716 [main] INFO  Elemento ricercato per Autore[]
+15:01:42.065 [main] INFO  --- Elenco catalogo ---
+15:01:42.071 [main] INFO  --- Rimozione di un elemento ---
+15:01:42.072 [main] INFO  Elemento rimossoLibro [ CodiceISBN = 3L, Titolo = Il signore degli Anelli, AnnoPublicazione = 2015, NumeroPagine = 400, Autore = J. R. R. Tolkien, Genere = Fantasy]
+15:01:42.072 [main] INFO  --- Elenco catalogo ---
+15:01:42.072 [main] INFO  --- Ricerca di un elemento per ISBN ---
+15:01:42.073 [main] INFO  Elemento ricercato per codice ISBN[Rivista [ CodiceISBN = 3R, Titolo = MotorShow, AnnoPublicazione = 2006, NumeroPagine = 150, periodicità = SEMESTRALE]]
+15:01:42.073 [main] INFO  --- Ricerca di un elemento per Anno pubblicazione ---
+15:01:42.073 [main] INFO  Elemento ricercato per anno pubblicazione[Libro [ CodiceISBN = 1L, Titolo = Il trono di spade, AnnoPublicazione = 2015, NumeroPagine = 400, Autore = George R.R. Martin, Genere = Fantasy]]
+15:01:42.073 [main] INFO  --- Ricerca di un elemento per Autore ---
+15:01:42.074 [main] INFO  Elemento ricercato per Autore[]
+15:04:57.459 [main] INFO  --- Elenco catalogo ---
+15:04:57.465 [main] INFO  --- Rimozione di un elemento ---
+15:04:57.467 [main] INFO  Elemento rimossoLibro [ CodiceISBN = 3L, Titolo = Il signore degli Anelli, AnnoPublicazione = 2015, NumeroPagine = 400, Autore = J. R. R. Tolkien, Genere = Fantasy]
+15:04:57.467 [main] INFO  --- Elenco catalogo ---
+15:04:57.467 [main] INFO  --- Ricerca di un elemento per ISBN ---
+15:04:57.467 [main] INFO  Elemento ricercato per codice ISBN[Rivista [ CodiceISBN = 3R, Titolo = MotorShow, AnnoPublicazione = 2006, NumeroPagine = 150, periodicità = SEMESTRALE]]
+15:04:57.468 [main] INFO  --- Ricerca di un elemento per Anno pubblicazione ---
+15:04:57.469 [main] INFO  Elemento ricercato per anno pubblicazione[Libro [ CodiceISBN = 1L, Titolo = Il trono di spade, AnnoPublicazione = 2015, NumeroPagine = 400, Autore = George R.R. Martin, Genere = Fantasy]]
+15:04:57.469 [main] INFO  --- Ricerca di un elemento per Autore ---
+15:04:57.470 [main] INFO  Elemento ricercato per Autore[Libro [ CodiceISBN = 2L, Titolo = Arte della guerra, AnnoPublicazione = 100, NumeroPagine = 600, Autore = Sun Tzu, Genere = Non-Fiction]]

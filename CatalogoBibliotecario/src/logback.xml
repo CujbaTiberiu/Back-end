@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
   <appender name="CONSOLE_OUTPUT" class="ch.qos.logback.core.ConsoleAppender">
     <encoder>
@@ -17,4 +16,4 @@
     <appender-ref ref="CONSOLE_OUTPUT" />
     <appender-ref ref="FILE_OUTPUT" />
   </root>
-</configuratio
+</configuration>
