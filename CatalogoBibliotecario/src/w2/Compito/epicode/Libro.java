@@ -49,5 +49,5 @@ public class Libro extends Catalogo{
 				+ this.autore + "#" + this.genere + "#";
 	}
 	
-
+	
 }

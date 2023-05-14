@@ -13,6 +13,19 @@ public class Rivista extends Catalogo {
 		super(codiceISBN, titolo, annoPublicazione, numeroPagine);
 		this.periodicità = periodicità;
 	}
+	
+
+	public Periodicità getPeriodicità() {
+		return periodicità;
+	}
+
+
+
+	public void setPeriodicità(Periodicità periodicità) {
+		this.periodicità = periodicità;
+	}
+
+
 
 	@Override
 	public String toString() {
@@ -27,7 +40,4 @@ public class Rivista extends Catalogo {
 				+ this.periodicità + "#";
 	}
 	
-	
-	
-
 }

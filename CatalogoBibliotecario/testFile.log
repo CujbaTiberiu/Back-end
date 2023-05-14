@@ -362,3 +362,18 @@
 16:44:18.774 [main] INFO  *** Scrivi su File ***
 16:44:18.774 [main] INFO  *** Scritto su File! ***
 16:44:18.774 [main] INFO  *** Leggi da File ***
+18:40:47.210 [main] INFO  --- Elenco catalogo ---
+18:40:47.226 [main] INFO  --- Rimozione di un elemento ---
+18:40:47.230 [main] INFO  Elemento rimossoLibro [ CodiceISBN = 3L, Titolo = Il signore degli Anelli, AnnoPublicazione = 2015, NumeroPagine = 400, Autore = J. R. R. Tolkien, Genere = Fantasy]
+18:40:47.231 [main] INFO  --- Elenco catalogo ---
+18:40:47.232 [main] INFO  --- Ricerca di un elemento per ISBN ---
+18:45:43.236 [main] INFO  --- Elenco catalogo ---
+18:45:43.252 [main] INFO  --- Rimozione di un elemento ---
+18:45:43.256 [main] INFO  Elemento rimossoLibro [ CodiceISBN = 3L, Titolo = Il signore degli Anelli, AnnoPublicazione = 2015, NumeroPagine = 400, Autore = J. R. R. Tolkien, Genere = Fantasy]
+18:45:43.257 [main] INFO  --- Elenco catalogo ---
+18:45:43.258 [main] INFO  --- Ricerca di un elemento per ISBN ---
+18:45:43.259 [main] INFO  Elemento ricercato per codice ISBN -> [Rivista [ CodiceISBN = 3R, Titolo = MotorShow, AnnoPublicazione = 2006, NumeroPagine = 150, periodicità = SEMESTRALE]]
+18:45:43.260 [main] INFO  --- Ricerca di un elemento per Anno pubblicazione ---
+18:45:43.261 [main] INFO  Elemento ricercato per anno pubblicazione -> [Libro [ CodiceISBN = 1L, Titolo = Il trono di spade, AnnoPublicazione = 2015, NumeroPagine = 400, Autore = George R.R. Martin, Genere = Fantasy]]
+18:45:43.261 [main] INFO  --- Ricerca di un elemento per Autore ---
+18:45:43.262 [main] INFO  Elemento ricercato per Autore -> [Libro [ CodiceISBN = 2L, Titolo = Arte della guerra, AnnoPublicazione = 100, NumeroPagine = 600, Autore = Sun Tzu, Genere = Non-Fiction]]

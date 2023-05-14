@@ -3,7 +3,7 @@ package w2.Compito.epicode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public abstract class  Catalogo {
+public abstract class  Catalogo extends Exception{
 	
 	private String codiceISBN;
 	private String titolo;
@@ -18,6 +18,11 @@ public abstract class  Catalogo {
 		this.annoPublicazione = annoPublicazione;
 		this.numeroPagine = numeroPagine;
 	}
+	
+	public Catalogo(String msg) {
+		super(msg);
+	}
+	
 
 	public String getCodiceISBN() {
 		return codiceISBN;
@@ -61,8 +66,6 @@ public abstract class  Catalogo {
 	public String toFileString() {
 		return codiceISBN + "#" + titolo + "#" +annoPublicazione + "#" + numeroPagine + "#" ;
 	}
-	
-	
-	
+		
 
 }
