@@ -3,24 +3,18 @@
     <fullyQualifiedTypeName name="javax.lang.model.util.ElementScanner6"/>
     <fullyQualifiedTypeName name="ep.classExpl.ex.CartaSim.Chiamata"/>
     <fullyQualifiedTypeName name="ep.classExpl.ex.Cliente"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="w1.compito.VolRipro"/>
     <fullyQualifiedTypeName name="w1.compito.gestisciLuminosita"/>
     <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
     <fullyQualifiedTypeName name="w1.compito.ElementoMultimediale"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="w2.esercizio.d1.MyExcpetion"/>
-    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
-    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
     <fullyQualifiedTypeName name="w2.esercizio3.d1.BancaException"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="com.Esercizio2.MultiThread"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="org.apache.commons.io.FileUtils"/>
-    <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="day4.Esercizio.Product"/>
     <fullyQualifiedTypeName name="java.time.chrono.ChronoLocalDate"/>
     <fullyQualifiedTypeName name="day4.Esercizio.Customer"/>
@@ -34,4 +28,12 @@
     <fullyQualifiedTypeName name="w2.Compito.epicode.Libro"/>
     <fullyQualifiedTypeName name="w2.Compito.epicode.Rivista"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>
