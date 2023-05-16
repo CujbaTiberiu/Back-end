@@ -82,12 +82,44 @@ SELECT * FROM Clienti;
 SELECT * FROM Fornitori;
 SELECT * FROM Prodotti;
 SELECT * FROM Fatture;
-
+-- 1
 SELECT Nome, Cognome FROM Clienti WHERE DataNascita >= '01.01.1982';
+SELECT Nome, Cognome FROM Clienti WHERE EXTRACT(YEAR FROM DataNascita) = '1990';
 
-SELECT count(*) FROM Fatture WHERE Iva = 21;
+-- 2
+SELECT count(*) AS num_fatt_21 FROM Fatture WHERE Iva = 21;
 
+-- 3 
 SELECT NumeroFatture ,Importo, DataFattura FROM Fatture WHERE Importo > 0;
 
-SELECT Descrizione FROM Prodotti INNER JOIN Fattura WHERE Fattura.DataAttivazione >= '01.01.2017' AND Fattura.InProduzione = "SI"
+SELECT 
+EXTRACT(YEAR FROM DataFattura) AS anno,
+count(*) AS num_fatt, 
+SUM(Importo) AS importo_tot
+FROM fatture 
+GROUP BY EXTRACT(YEAR FROM DataFattura);
+
+-- 4
+SELECT * FROM Prodotti WHERE EXTRACT(YEAR FROM DataAttivazione) = 2016
+AND (InProduzione = 'SI' OR InCommercio = 'SI');
+
+-- 5
+
+SELECT EXTRACT(YEAR FROM DataFattura) AS anno, COUNT(*) AS num_fatt FROM Fatture WHERE Iva = 20 GROUP BY EXTRACT(YEAR FROM DataFattura);
+
+-- 6
+SELECT EXTRACT(YEAR FROM DataFattura) AS anno,
+COUNT(*) AS num_fatt_a
+FROM Fatture WHERE Tipologia = 'A'
+GROUP BY EXTRACT(YEAR FROM DataFattura)
+HAVING COUNT(*) > 1;
+
+-- 7
+SELECT NumeroFatture, Importo, Iva, DataFattura, Denominazione FROM Fatture AS fa INNER JOIN Fornitori AS fo 
+ON fo.NumeroFornitore = fo.NumeroFornitore;
+
+
+
+
+
 
