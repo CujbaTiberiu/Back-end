@@ -1,7 +1,9 @@
 package entity;
 
 import java.time.LocalDate;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -9,6 +11,8 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import enums.tipoEvento;
@@ -21,33 +25,47 @@ public class Evento {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
+	@Column(nullable = false)
 	private String titolo;
 	
-	@Column(name = "data_evento")
+	@Column(name = "data_evento", nullable = false)
 	private LocalDate dataEvento;
 	
+	@Column(nullable = false)
 	private String descrizione;
 	
 	@Enumerated(EnumType.STRING)
-	@Column(name = "tipo_evento")
+	@Column(name = "tipo_evento", nullable = false)
 	private tipoEvento tipoEvento;
 	
-	@Column(name = "numero_max_partecipanti")
+	@Column(name = "numero_max_partecipanti", nullable = false)
 	private int numeroMassimoPartecipanti;
+	
+	@OneToMany(cascade = CascadeType.ALL)
+	@Column(name = "totale_partecipanti")
+	private Set<Partecipazione> totPartecipazioni;
+	
+	@Column(nullable = false)
+	@OneToOne(cascade = CascadeType.PERSIST)
+	private Location location;
 
 	public Evento() {
 		super();
 	}
 
 	public Evento(String titolo, LocalDate dataEvento, String descrizione, enums.tipoEvento tipoEvento,
-			int numeroMassimoPartecipanti) {
+			int numeroMassimoPartecipanti, Set<Partecipazione> totPartecipazioni, Location location) {
 		super();
 		this.titolo = titolo;
 		this.dataEvento = dataEvento;
 		this.descrizione = descrizione;
 		this.tipoEvento = tipoEvento;
 		this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
+		this.totPartecipazioni = totPartecipazioni;
+		this.location = location;
 	}
+
+
 
 	public int getId() {
 		return id;
@@ -96,14 +114,40 @@ public class Evento {
 	public void setNumeroMassimoPartecipanti(int numeroMassimoPartecipanti) {
 		this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
 	}
+	
+	
+
+	public Set<Partecipazione> getTotPartecipazioni() {
+		return totPartecipazioni;
+	}
+
+
+
+	public void setTotPartecipazioni(Set<Partecipazione> totPartecipazioni) {
+		this.totPartecipazioni = totPartecipazioni;
+	}
+
+
+
+	public Location getLocation() {
+		return location;
+	}
+
+
+
+	public void setLocation(Location location) {
+		this.location = location;
+	}
+
+
 
 	@Override
 	public String toString() {
 		return "Evento [id=" + id + ", titolo=" + titolo + ", dataEvento=" + dataEvento + ", descrizione=" + descrizione
-				+ ", tipoEvento=" + tipoEvento + ", numeroMassimoPartecipanti=" + numeroMassimoPartecipanti + "]";
+				+ ", tipoEvento=" + tipoEvento + ", numeroMassimoPartecipanti=" + numeroMassimoPartecipanti
+				+ ", totPartecipazioni=" + totPartecipazioni + ", location=" + location + "]";
 	}
-	
-	
+
 }
 
 

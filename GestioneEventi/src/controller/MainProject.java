@@ -1,11 +1,7 @@
 package controller;
 
-import java.time.LocalDate;
-
 import javax.persistence.EntityManager;
-
 import entity.Evento;
-import enums.tipoEvento;
 import utils.JpaUtil;
 
 public class MainProject {
@@ -14,10 +10,10 @@ public class MainProject {
 	
 	public static void main(String[] args) {
 		
-		Evento e1 = new Evento("E3", LocalDate.of(2023, 5, 20), "Festival giochi", tipoEvento.PUBBLICO, 2000);
-		Evento e2 = new Evento("Concerto", LocalDate.of(2023, 8, 5), "Live 50 cent", tipoEvento.PUBBLICO, 1500);
-		Evento e3 = new Evento("Matrimonio", LocalDate.of(2024, 1, 1), "Franco & Francesca", tipoEvento.PRIVATO, 300);
-		addEvento(e1);
+		//Evento e1 = new Evento("E3", LocalDate.of(2023, 5, 20), "Festival giochi", tipoEvento.PUBBLICO, 2000);
+		//Evento e2 = new Evento("Concerto", LocalDate.of(2023, 8, 5), "Live 50 cent", tipoEvento.PUBBLICO, 1500);
+		//Evento e3 = new Evento("Matrimonio", LocalDate.of(2024, 1, 1), "Franco & Francesca", tipoEvento.PRIVATO, 300);
+		//addEvento(e1);
 		//addEvento(e2);
 		//addEvento(e3);
 		//Evento e4 = findEvento(1);
