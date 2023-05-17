@@ -2,10 +2,10 @@ package entity;
 
 import java.time.LocalDate;
 import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -35,12 +35,13 @@ public class Persona {
 	@Column(name = "data_nascita", nullable = false)
 	private LocalDate dataNascita;
 	
+	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)
 	private Sesso sesso;
 	
 	@Column(name = "lista_partecipazioni")
 	@OrderBy("dataEvento ASC")
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "persona")
 	private List<Partecipazione> listaPartecipazioni;
 
 	public Persona() {

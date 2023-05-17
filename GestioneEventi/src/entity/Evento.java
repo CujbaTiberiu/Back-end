@@ -41,7 +41,7 @@ public class Evento {
 	@Column(name = "numero_max_partecipanti", nullable = false)
 	private int numeroMassimoPartecipanti;
 	
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "evento")
 	@Column(name = "totale_partecipanti")
 	private Set<Partecipazione> totPartecipazioni;
 	
@@ -64,7 +64,6 @@ public class Evento {
 		this.totPartecipazioni = totPartecipazioni;
 		this.location = location;
 	}
-
 
 
 	public int getId() {
@@ -114,32 +113,22 @@ public class Evento {
 	public void setNumeroMassimoPartecipanti(int numeroMassimoPartecipanti) {
 		this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
 	}
-	
-	
 
 	public Set<Partecipazione> getTotPartecipazioni() {
 		return totPartecipazioni;
 	}
 
-
-
 	public void setTotPartecipazioni(Set<Partecipazione> totPartecipazioni) {
 		this.totPartecipazioni = totPartecipazioni;
 	}
-
-
 
 	public Location getLocation() {
 		return location;
 	}
 
-
-
 	public void setLocation(Location location) {
 		this.location = location;
 	}
-
-
 
 	@Override
 	public String toString() {

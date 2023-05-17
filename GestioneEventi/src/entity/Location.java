@@ -29,11 +29,10 @@ public class Location {
 		super();
 	}
 
-	public Location(String nome, String citta, Evento evento) {
+	public Location(String nome, String citta) {
 		super();
 		this.nome = nome;
 		this.citta = citta;
-		this.evento = evento;
 	}
 
 	public int getId() {
