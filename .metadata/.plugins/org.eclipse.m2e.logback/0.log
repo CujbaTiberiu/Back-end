@@ -2437,3 +2437,144 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:j
 2023-05-16 15:55:49,938 [Worker-156: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\JDBCexercise\src\main\resources
 2023-05-16 15:55:49,940 [Worker-156: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2023-05-16 15:55:49,943 [Worker-156: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\JDBCexercise\src\test\resources
+2023-05-16 15:56:20,407 [Worker-153: Launching MainProject (7)] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-16 15:56:20,410 [Worker-153: Launching MainProject (7)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\JDBCexercise\src\main\resources
+2023-05-16 15:56:20,412 [Worker-153: Launching MainProject (7)] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-16 15:56:20,416 [Worker-153: Launching MainProject (7)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\JDBCexercise\src\test\resources
+2023-05-16 17:35:17,748 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-05-17 14:05:37,924 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:05:37,929 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\JDBCexercise\src\main\resources
+2023-05-17 14:05:37,932 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:05:37,935 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\JDBCexercise\src\test\resources
+2023-05-17 14:05:38,295 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:05:38,298 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\JDBCtest\src\main\resources
+2023-05-17 14:05:38,300 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:05:38,304 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\JDBCtest\src\test\resources
+2023-05-17 14:05:38,391 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:05:38,394 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\JPAproject\src\main\resources
+2023-05-17 14:05:38,396 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:05:38,399 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\JPAproject\src\test\resources
+2023-05-17 14:05:56,818 [Worker-35: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: GestioneEventi:GestioneEventi:0.0.1-SNAPSHOT @ C:\Users\cujba\eclipse-workspace\GestioneEventi\pom.xml.
+2023-05-17 14:05:57,102 [Worker-35: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /GestioneEventi/src
+2023-05-17 14:05:57,103 [Worker-35: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /GestioneEventi/src/test/java because it overlaps with /GestioneEventi/src
+2023-05-17 14:05:57,273 [Worker-35: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-05-17 14:05:57,467 [Worker-35: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: GestioneEventi:GestioneEventi:0.0.1-SNAPSHOT @ C:\Users\cujba\eclipse-workspace\GestioneEventi\pom.xml.
+2023-05-17 14:05:57,539 [Worker-35: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /GestioneEventi/src
+2023-05-17 14:05:57,540 [Worker-35: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /GestioneEventi/src/test/java because it overlaps with /GestioneEventi/src
+2023-05-17 14:05:57,600 [Worker-35: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 0,00 sec, update config takes 0,00 sec 
+2023-05-17 14:05:57,748 [Worker-34: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:05:57,752 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:05:57,754 [Worker-34: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:05:57,757 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:06:35,321 [Worker-37: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: GestioneEventi:GestioneEventi:0.0.1-SNAPSHOT @ C:\Users\cujba\eclipse-workspace\GestioneEventi\pom.xml.
+2023-05-17 14:06:35,488 [Worker-37: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:06:35,493 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:06:35,495 [Worker-37: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:06:35,498 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:07:04,118 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:07:04,121 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:07:04,123 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:07:04,127 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:07:22,558 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:07:22,561 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:07:22,563 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:07:22,566 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:09:19,573 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:09:19,576 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:09:19,577 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:09:19,580 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:10:11,424 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:10:11,428 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:10:11,430 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:10:11,434 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:10:32,603 [Worker-32: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:10:32,605 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:10:32,607 [Worker-32: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:10:32,610 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:12:15,977 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:12:15,983 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:12:15,988 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:12:15,993 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:15:03,204 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:15:03,211 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:15:03,213 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:15:03,218 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:15:16,225 [Worker-32: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:15:16,228 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:15:16,229 [Worker-32: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:15:16,232 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:22:17,684 [Worker-40: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:22:17,688 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:22:17,689 [Worker-40: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:22:17,693 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:25:10,328 [Worker-43: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:25:10,332 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:25:10,334 [Worker-43: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:25:10,338 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:26:41,763 [Worker-32: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:26:41,766 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:26:41,769 [Worker-32: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:26:41,772 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:30:56,973 [Worker-45: Launching MainProject (8)] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:30:56,976 [Worker-45: Launching MainProject (8)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:30:56,978 [Worker-45: Launching MainProject (8)] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:30:56,981 [Worker-45: Launching MainProject (8)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:35:01,553 [Worker-50: Launching MainProject (8)] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:35:01,558 [Worker-50: Launching MainProject (8)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:35:01,560 [Worker-50: Launching MainProject (8)] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:35:01,564 [Worker-50: Launching MainProject (8)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:36:59,511 [Worker-40: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:36:59,515 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:36:59,518 [Worker-40: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:36:59,521 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:41:26,558 [Worker-50: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:41:26,562 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:41:26,564 [Worker-50: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:41:26,567 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:46:06,555 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:46:06,558 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:46:06,559 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:46:06,561 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:46:30,836 [Worker-54: Launching MainProject (8)] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:46:30,840 [Worker-54: Launching MainProject (8)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:46:30,842 [Worker-54: Launching MainProject (8)] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:46:30,846 [Worker-54: Launching MainProject (8)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:49:12,123 [Worker-56: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:49:12,126 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:49:12,127 [Worker-56: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:49:12,130 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:49:18,595 [Worker-57: Launching MainProject (8)] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:49:18,600 [Worker-57: Launching MainProject (8)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:49:18,602 [Worker-57: Launching MainProject (8)] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:49:18,606 [Worker-57: Launching MainProject (8)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:50:36,097 [Worker-58: Launching MainProject (8)] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:50:36,100 [Worker-58: Launching MainProject (8)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:50:36,101 [Worker-58: Launching MainProject (8)] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:50:36,105 [Worker-58: Launching MainProject (8)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:51:02,327 [Worker-54: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:51:02,330 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:51:02,331 [Worker-54: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:51:02,334 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:51:33,688 [Worker-59: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:51:33,691 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:51:33,692 [Worker-59: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:51:33,695 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:52:02,458 [Worker-59: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:52:02,461 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:52:02,463 [Worker-59: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:52:02,466 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:52:05,152 [Worker-58: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:52:05,155 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:52:05,157 [Worker-58: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:52:05,160 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:52:10,697 [Worker-58: Launching MainProject (8)] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:52:10,700 [Worker-58: Launching MainProject (8)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:52:10,701 [Worker-58: Launching MainProject (8)] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:52:10,704 [Worker-58: Launching MainProject (8)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:53:38,697 [Worker-40: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:53:38,702 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:53:38,707 [Worker-40: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:53:38,709 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\test\resources
+2023-05-17 14:54:22,843 [Worker-40: Launching MainProject (8)] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-17 14:54:22,845 [Worker-40: Launching MainProject (8)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\cujba\eclipse-workspace\GestioneEventi\src\main\resources
+2023-05-17 14:54:22,846 [Worker-40: Launching MainProject (8)] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
