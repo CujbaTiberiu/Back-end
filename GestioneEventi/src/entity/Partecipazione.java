@@ -75,7 +75,8 @@ public class Partecipazione {
 
 	@Override
 	public String toString() {
-		return "Partecipazione [id=" + id + ", persona=" + persona + ", evento=" + evento + ", stato=" + stato + "]";
+	    return "Partecipazione [id=" + id + ", persona=" + (persona != null ? persona.toString() : "null") + ", evento=" + (evento != null ? evento.toString() : "null") + ", stato=" + stato + "]";
 	}
+
 
 }

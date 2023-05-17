@@ -48,15 +48,13 @@ public class Persona {
 		super();
 	}
 
-	public Persona(String nome, String cognome, String email, LocalDate dataNascita, Sesso sesso,
-			List<Partecipazione> listaPartecipazioni) {
+	public Persona(String nome, String cognome, String email, LocalDate dataNascita, Sesso sesso) {
 		super();
 		this.nome = nome;
 		this.cognome = cognome;
 		this.email = email;
 		this.dataNascita = dataNascita;
 		this.sesso = sesso;
-		this.listaPartecipazioni = listaPartecipazioni;
 	}
 
 	public int getId() {
@@ -118,7 +116,7 @@ public class Persona {
 	@Override
 	public String toString() {
 		return "Persona [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", email=" + email + ", dataNascita="
-				+ dataNascita + ", sesso=" + sesso + ", listaPartecipazioni=" + listaPartecipazioni + "]";
+				+ dataNascita + ", sesso=" + sesso + "]";
 	}
 
 }

@@ -1,7 +1,9 @@
 package entity;
 
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Set;
+import java.util.SortedSet;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -53,14 +55,13 @@ public class Evento {
 	}
 
 	public Evento(String titolo, LocalDate dataEvento, String descrizione, enums.tipoEvento tipoEvento,
-			int numeroMassimoPartecipanti, Set<Partecipazione> totPartecipazioni, Location location) {
+			int numeroMassimoPartecipanti, Location location) {
 		super();
 		this.titolo = titolo;
 		this.dataEvento = dataEvento;
 		this.descrizione = descrizione;
 		this.tipoEvento = tipoEvento;
 		this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
-		this.totPartecipazioni = totPartecipazioni;
 		this.location = location;
 	}
 
@@ -132,8 +133,7 @@ public class Evento {
 	@Override
 	public String toString() {
 		return "Evento [id=" + id + ", titolo=" + titolo + ", dataEvento=" + dataEvento + ", descrizione=" + descrizione
-				+ ", tipoEvento=" + tipoEvento + ", numeroMassimoPartecipanti=" + numeroMassimoPartecipanti
-				+ ", totPartecipazioni=" + totPartecipazioni + ", location=" + location + "]";
+				+ ", tipoEvento=" + tipoEvento + ", numeroMassimoPartecipanti=" + numeroMassimoPartecipanti + "]";
 	}
 
 }
