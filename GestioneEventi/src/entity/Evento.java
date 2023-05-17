@@ -45,7 +45,6 @@ public class Evento {
 	@Column(name = "totale_partecipanti")
 	private Set<Partecipazione> totPartecipazioni;
 	
-	@Column(nullable = false)
 	@OneToOne(cascade = CascadeType.PERSIST)
 	private Location location;
 

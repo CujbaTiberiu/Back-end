@@ -21,11 +21,9 @@ public class Partecipazione {
 	private int id;
 	
 	@ManyToOne(cascade = CascadeType.PERSIST)
-	@Column(nullable = false)
 	private Persona persona;
 	
 	@ManyToOne(cascade = CascadeType.PERSIST)
-	@Column(nullable = false)
 	private Evento evento;
 	
 	@Enumerated(EnumType.STRING)
