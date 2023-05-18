@@ -1,7 +1,10 @@
 package entity;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -40,8 +43,8 @@ public class Persona {
 	private Sesso sesso;
 	
 	@Column(name = "lista_partecipazioni")
-	@OrderBy("dataEvento ASC")
-	@OneToMany(mappedBy = "persona")
+	@OrderBy(value = "eventi.dataEvento ASC")
+	@OneToMany(mappedBy = "persona", cascade = CascadeType.REMOVE)
 	private List<Partecipazione> listaPartecipazioni;
 
 	public Persona() {
@@ -55,6 +58,7 @@ public class Persona {
 		this.email = email;
 		this.dataNascita = dataNascita;
 		this.sesso = sesso;
+		this.listaPartecipazioni = new ArrayList<Partecipazione>();
 	}
 
 	public int getId() {

@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -22,8 +22,6 @@ public class Location {
 	@Column(nullable = false)
 	private String citta;
 	
-	@OneToOne(mappedBy = "location")
-	private Evento evento;
 	
 	public Location() {
 		super();
@@ -59,17 +57,10 @@ public class Location {
 		this.citta = citta;
 	}
 
-	public Evento getEvento() {
-		return evento;
-	}
-
-	public void setEvento(Evento evento) {
-		this.evento = evento;
-	}
 
 	@Override
 	public String toString() {
-		return "Location [id=" + id + ", nome=" + nome + ", citta=" + citta + ", evento=" + evento + "]";
+		return "Location [id=" + id + ", nome=" + nome + ", citta=" + citta + ", evento=" + "]";
 	}
 
 	

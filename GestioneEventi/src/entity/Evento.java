@@ -1,10 +1,9 @@
 package entity;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Set;
-import java.util.SortedSet;
-
+import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,18 +12,24 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import DAO.EventoDAO;
 import enums.tipoEvento;
 
+
 @Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS) 
 @Table(name = "eventi")
-public class Evento {
+public class Evento extends EventoDAO{
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue
 	private int id;
 	
 	@Column(nullable = false)
@@ -43,11 +48,11 @@ public class Evento {
 	@Column(name = "numero_max_partecipanti", nullable = false)
 	private int numeroMassimoPartecipanti;
 	
-	@OneToMany(mappedBy = "evento")
+	@OneToMany(mappedBy = "evento", cascade = CascadeType.REMOVE)
 	@Column(name = "totale_partecipanti")
-	private Set<Partecipazione> totPartecipazioni;
+	private List<Partecipazione> totPartecipazioni;
 	
-	@OneToOne(cascade = CascadeType.PERSIST)
+	@ManyToOne(cascade = CascadeType.PERSIST)
 	private Location location;
 
 	public Evento() {
@@ -63,6 +68,7 @@ public class Evento {
 		this.tipoEvento = tipoEvento;
 		this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
 		this.location = location;
+		this.totPartecipazioni = new ArrayList<Partecipazione>();
 	}
 
 
@@ -114,11 +120,11 @@ public class Evento {
 		this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
 	}
 
-	public Set<Partecipazione> getTotPartecipazioni() {
+	public List<Partecipazione> getTotPartecipazioni() {
 		return totPartecipazioni;
 	}
 
-	public void setTotPartecipazioni(Set<Partecipazione> totPartecipazioni) {
+	public void setTotPartecipazioni(List<Partecipazione> totPartecipazioni) {
 		this.totPartecipazioni = totPartecipazioni;
 	}
 
