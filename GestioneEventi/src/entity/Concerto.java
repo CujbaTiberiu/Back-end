@@ -1,5 +1,7 @@
 package entity;
 
+import java.time.LocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -20,12 +22,16 @@ public class Concerto extends Evento{
 	public Concerto() {
 		super();
 	}
+	
+	
 
-	public Concerto(Genere genere, boolean inStreaming) {
-		super();
+	public Concerto(String titolo, LocalDate dataEvento, String descrizione, enums.tipoEvento tipoEvento,
+			int numeroMassimoPartecipanti, Location location, Genere genere, boolean inStreaming) {
+		super(titolo, dataEvento, descrizione, tipoEvento, numeroMassimoPartecipanti, location);
 		this.genere = genere;
 		this.inStreaming = inStreaming;
 	}
+
 
 	public Genere getGenere() {
 		return genere;

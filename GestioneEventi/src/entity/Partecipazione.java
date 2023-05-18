@@ -1,5 +1,5 @@
 package entity;
-import javax.persistence.CascadeType;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -20,10 +20,10 @@ public class Partecipazione {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@ManyToOne(cascade = CascadeType.PERSIST)
+	@ManyToOne
 	private Persona persona;
 	
-	@ManyToOne(cascade = CascadeType.PERSIST)
+	@ManyToOne
 	private Evento evento;
 	
 	@Enumerated(EnumType.STRING)

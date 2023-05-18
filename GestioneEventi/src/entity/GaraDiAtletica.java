@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
@@ -13,10 +15,10 @@ public class GaraDiAtletica extends Evento{
 	
 	
 	
-	@OneToMany
+	@ManyToMany
 	private List<Persona> SetAtleti; 
 	
-	@OneToOne
+	@ManyToOne
 	private  Persona Vincitore;
 	
 	

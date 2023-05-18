@@ -1,6 +1,7 @@
 package entity;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,10 +22,13 @@ public class PartitaDiCalcio extends Evento{
 	public PartitaDiCalcio() {
 		super();
 	}
+	
+	
 
-	public PartitaDiCalcio(String squadraDiCasa, String squadraOspite, String squadraVincente, Integer golSquadraDiCasa,
+	public PartitaDiCalcio(String titolo, LocalDate dataEvento, String descrizione, enums.tipoEvento tipoEvento,
+			int numeroMassimoPartecipanti, Location location, String squadraDiCasa, String squadraOspite, String squadraVincente, Integer golSquadraDiCasa,
 			Integer golSquadraOspite) {
-		super();
+		super(titolo, dataEvento, descrizione, tipoEvento, numeroMassimoPartecipanti, location);
 		SquadraDiCasa = squadraDiCasa;
 		SquadraOspite = squadraOspite;
 		SquadraVincente = squadraVincente;
@@ -71,6 +75,7 @@ public class PartitaDiCalcio extends Evento{
 	public void setGolSquadraOspite(Integer golSquadraOspite) {
 		GolSquadraOspite = golSquadraOspite;
 	}
+	
 
 	@Override
 	public String toString() {

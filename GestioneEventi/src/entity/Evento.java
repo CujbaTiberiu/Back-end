@@ -6,6 +6,8 @@ import java.util.HashSet;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -24,12 +26,12 @@ import enums.tipoEvento;
 
 
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS) 
-@Table(name = "eventi")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE) 
+@DiscriminatorColumn(name = "TipoEvento", discriminatorType = DiscriminatorType.STRING)
 public class Evento extends EventoDAO{
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
 	@Column(nullable = false)
