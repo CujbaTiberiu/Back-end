@@ -8,6 +8,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="findAllEventi"/>
 			<item value="sc.close();"/>
 			<item value="Inserisci un numero tra 1 e 6 inclusi per accedere alle funzionalità del menu!"/>
 			<item value="if(listaImg[i] instanceof eImage) {"/>

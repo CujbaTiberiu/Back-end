@@ -17,6 +17,7 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -28,6 +29,7 @@ import enums.tipoEvento;
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE) 
 @DiscriminatorColumn(name = "TipoEvento", discriminatorType = DiscriminatorType.STRING)
+@NamedQuery(name = "findAllEventi", query = "SELECT ev FROM Evento ev")
 public class Evento extends EventoDAO{
 
 	@Id
