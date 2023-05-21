@@ -17,10 +17,10 @@ public class UtenteDAO implements IUtenteDAO{
 			em.getTransaction().begin();
 			em.persist(u);
 			em.getTransaction().commit();
-			System.out.println("Utente salvato nel DB!!");
+			System.out.println(u + " salvato nel DB!!");
 		} catch (Exception e) {
 			em.getTransaction().rollback();
-			System.out.println("Errore su salvataggio!!");
+			System.out.println("Errore su salvataggio!");
 			e.printStackTrace();
 		} finally {
 			em.close();
@@ -38,7 +38,7 @@ public class UtenteDAO implements IUtenteDAO{
 			return u;
 		} catch (Exception e) {
 			em.getTransaction().rollback();
-			System.out.println("Errore su salvataggio!!");
+			System.out.println("Errore su ricerca!");
 			e.printStackTrace();
 		} finally {
 			em.close();
@@ -53,7 +53,7 @@ public class UtenteDAO implements IUtenteDAO{
 			em.getTransaction().begin();
 			em.remove(u);
 			em.getTransaction().commit();
-			System.out.println("Utente salvato nel DB!!");
+			System.out.println(u + " eliminato dal DB!!");
 		} catch (Exception e) {
 			em.getTransaction().rollback();
 			System.out.println("Errore su salvataggio!!");
@@ -71,10 +71,10 @@ public class UtenteDAO implements IUtenteDAO{
 			em.getTransaction().begin();
 			em.merge(u);
 			em.getTransaction().commit();
-			System.out.println("Utente salvato nel DB!!");
+			System.out.println(u + "salvato nel DB!!");
 		} catch (Exception e) {
 			em.getTransaction().rollback();
-			System.out.println("Errore su salvataggio!!");
+			System.out.println("Errore nella modifica del " + u + " nel DB!!");
 			e.printStackTrace();
 		} finally {
 			em.close();

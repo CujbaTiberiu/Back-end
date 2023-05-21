@@ -37,7 +37,7 @@ public class MainProject {
 		
 		
 		/* -- Rimozione di un elemento del catalogo dato un codice ISBN -- */
-		//cd.cancellaDalCatalogo(5);
+		//cd.cancellaDalCatalogo(6);
 		
 		
 		/* -- Salva utenti -- */
@@ -48,19 +48,22 @@ public class MainProject {
 		
 		/* -- Cerca utente con numero tessera -- */
 		//Utente fidel = ud.trovaPerTessera(1);
+		//Utente joe = ud.trovaPerTessera(2);
 		//System.out.println(fidel);
 		
 		
 		/* -- Cerca nel catologo con Isbn -- */
 		//Catalogo iceDragon = cd.cercaPerIsbn(3);
+		//Catalogo ringsLord = cd.cercaPerIsbn(4);
 		//System.out.println(iceDragon);
 		
 		
 		/* -- Salva un Prestito -- */
 		//Prestito p1 = new Prestito(fidel, iceDragon, LocalDate.of(2023, 5, 19));
+		//Prestito p2 = new Prestito(joe, ringsLord, LocalDate.of(2023, 5, 21));
 		//PrestitoDAO pd = new PrestitoDAO();
-		//pd.salva(p1);
-		
+	    //pd.salva(p1);
+	   // pd.salva(p2);
 		
 		/* -- Ricerca per anno pubblicazione -- */
 		//List<Catalogo> ap = cd.cercaPerAnnoPubblicazione(1954);
@@ -90,6 +93,13 @@ public class MainProject {
 		//pd.update(ps);
 		//List<Prestito> p2 = pd.mostraPrestitiScaduti();//not working well..in revision
 		//p2.forEach(psca -> System.out.println(psca));
+		
+		
+		/* -- Mostra tutti i prestiti-- */
+		//PrestitoDAO pdao = new PrestitoDAO();
+		//List<Prestito> pd1 = pdao.mostraTutti();
+		//pd1.forEach(p -> System.out.println(p));
+		
 		
 	}
 

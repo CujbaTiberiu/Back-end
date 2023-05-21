@@ -15,7 +15,7 @@ public class CatalogoDAO implements ICatalogoDAO{
 			em.getTransaction().begin();
 			em.persist(c);
 			em.getTransaction().commit();
-			System.out.println("Elemento del Catalogo salvato nel DB!!");
+			System.out.println("Elemento " + c + " salvato nel DB!!");
 		} catch (Exception e) {
 			em.getTransaction().rollback();
 			System.out.println("Errore su salvataggio!!");
@@ -34,7 +34,7 @@ public class CatalogoDAO implements ICatalogoDAO{
 			Catalogo c =  em.find(Catalogo.class, isbn);
 			em.remove(c);
 			em.getTransaction().commit();
-			System.out.println("Elemnto del Catalogo eliminato dal DB!!");
+			System.out.println("Elememento del " + c + " eliminato dal DB!!");
 		} catch (Exception e) {
 			em.getTransaction().rollback();
 			System.out.println("Errore nella cancellazione!!");
@@ -57,7 +57,7 @@ public class CatalogoDAO implements ICatalogoDAO{
 			return c;
 		} catch (Exception e) {
 			em.getTransaction().rollback();
-			System.out.println("Errore su salvataggio!!");
+			System.out.println("Errore nella ricerca!");
 		} finally {
 			em.close();
 		}

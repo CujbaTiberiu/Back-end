@@ -17,7 +17,7 @@ public class PrestitoDAO implements IPrestitoDAO{
 			em.getTransaction().begin();
 			em.persist(p);
 			em.getTransaction().commit();
-			System.out.println("Prestito salvato nel DB!!");
+			System.out.println(p + " salvato nel DB!!");
 		} catch (Exception e) {
 			em.getTransaction().rollback();
 			System.out.println("Errore su salvataggio!!");
@@ -38,7 +38,7 @@ public class PrestitoDAO implements IPrestitoDAO{
 			return p;
 		} catch (Exception e) {
 			em.getTransaction().rollback();
-			System.out.println("Errore su salvataggio!!");
+			System.out.println("Errore nella ricerca!");
 			e.printStackTrace();
 		} finally {
 			em.close();
@@ -53,10 +53,10 @@ public class PrestitoDAO implements IPrestitoDAO{
 			em.getTransaction().begin();
 			em.remove(p);
 			em.getTransaction().commit();
-			System.out.println("Prestito eliminato dal DB!!");
+			System.out.println(p + " eliminato dal DB!!");
 		} catch (Exception e) {
 			em.getTransaction().rollback();
-			System.out.println("Errore su salvataggio!!");
+			System.out.println("Errore nella cancellazione!");
 			e.printStackTrace();
 		} finally {
 			em.close();
@@ -71,10 +71,10 @@ public class PrestitoDAO implements IPrestitoDAO{
 			em.getTransaction().begin();
 			em.merge(p);
 			em.getTransaction().commit();
-			System.out.println("Prestito salvato nel DB!!");
+			System.out.println("Modifica del " + p + " salvato nel DB!!");
 		} catch (Exception e) {
 			em.getTransaction().rollback();
-			System.out.println("Errore su salvataggio!!");
+			System.out.println("Errore su salvataggio della modifica!");
 			e.printStackTrace();
 		} finally {
 			em.close();
@@ -88,9 +88,13 @@ public class PrestitoDAO implements IPrestitoDAO{
 		try {
 			Query q = em.createNamedQuery("mostraTuttiPrestiti");
 			return q.getResultList();
+		}catch(Exception e) {
+				e.printStackTrace();
+			
 		} finally {
 			em.close();
 		}
+		return null;
 	}
 	
 	@Override
