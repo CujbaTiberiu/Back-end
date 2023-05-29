@@ -4,36 +4,34 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.EsSpring.day1.godfathers.Config.MenuConfiguration;
+import com.EsSpring.day1.godfathersPizza.model.Menu;
+
 @SpringBootApplication
 public class GodfathersPizzaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GodfathersPizzaApplication.class, args);
 		
-		System.out.println("Pizzas                             Calories  Prices");
-		beanPizzaMargherita();		
-		beanPizzaHawaii();
+		configWith_Bean();
+	
 	}
 	
-	public static void beanPizzaMargherita() {
+
+	public static void configWith_Bean() {
 		// Creo un Container dove utilizzare i bean sulla base del file di configurazione ConfigurationTest creato
-		AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext(ConfigPizzaMargherita.class);
-		
-		// Recupero il Bean test
-		PizzaMargherita p1 = (PizzaMargherita) appContext.getBean("pizzaMargherita");
-		p1.readTxt();
-		
-		
+		AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext(MenuConfiguration.class);
+
+		// Recupero il Bean Menu
+		Menu menu = (Menu) appContext.getBean("menu");
+		System.out.println(" -- Pizzas --");
+		menu.getMenuPizza().forEach(p -> System.out.println(p.getMenuItemLine()));
+		System.out.println(" -- Toppings --");
+		menu.getMenuTopping().forEach(t -> System.out.println(t.getMenuItemLine()));
+		System.out.println(" -- Drinks --");
+		menu.getMenuDrink().forEach(d -> System.out.println(d.getMenuItemLine()));
+		System.out.println(" -- Gifts --");
+		menu.getMenuGift().forEach(g -> System.out.println(g.getMenuItemLine()));
 		// Chiudo il Context
-		appContext.close();
-	}
-
-	public static void beanPizzaHawaii() {
-		AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext(ConfigHawaiianPizza.class);
-
-		HawaiianPizza p1 = (HawaiianPizza) appContext.getBean("hawaiianPizza");
-		p1.readTxt();
-		
 		appContext.close();
 	}
 
