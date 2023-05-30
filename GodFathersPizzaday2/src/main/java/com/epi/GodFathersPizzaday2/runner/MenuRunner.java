@@ -57,8 +57,12 @@ public class MenuRunner implements CommandLineRunner{
 		go.getTavolo().setNumero(1);
 		go.getTavolo().setNumeroCoperti(2);;
 		go.getTavolo().setStato(StatoTavolo.OCCUPATO);
-	    go.getOrdine().getListaOrdine().forEach(o -> log.info(o.toString()));
 		
+		log.info(go.getTavolo().toString());
+		log.info(go.getOrdine().mostraOrdine());
+		log.info(" -- Elenco Ordinazione --");
+	    go.getOrdine().getListaOrdine().forEach(o -> log.info(o.toString()));
+	    
 		appContext.close();
 		
 	}
