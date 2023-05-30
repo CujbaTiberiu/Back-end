@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy/>
+<typeInfoHistroy>
+    <typeInfo handle="=godfathersPizza/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.EsSpring.day1.godfathersPizza.model{Drink.java[Drink" modifiers="1" timestamp="1685383895961"/>
+    <typeInfo handle="=godfathersPizza/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.EsSpring.day1.godfathersPizza.model{Gift.java[Gift" modifiers="1" timestamp="1685381015766"/>
+    <typeInfo handle="=godfathersPizza/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.EsSpring.day1.godfathersPizza.model{FoodItem.java[FoodItem" modifiers="1025" timestamp="1685381211461"/>
+    <typeInfo handle="=godfathersPizza/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.EsSpring.day1.godfathersPizza.model{PizzaTopping.java[PizzaTopping" modifiers="1" timestamp="1685431356300"/>
+</typeInfoHistroy>

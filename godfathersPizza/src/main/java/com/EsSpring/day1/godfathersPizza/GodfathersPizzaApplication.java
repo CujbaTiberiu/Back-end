@@ -29,7 +29,7 @@ public class GodfathersPizzaApplication {
 		menu.getMenuTopping().forEach(t -> System.out.println(t.getMenuItemLine()));
 		System.out.println(" -- Drinks --");
 		menu.getMenuDrink().forEach(d -> System.out.println(d.getMenuItemLine()));
-		System.out.println(" -- Gifts --");
+		System.out.println(" -- Franchise --");
 		menu.getMenuGift().forEach(g -> System.out.println(g.getMenuItemLine()));
 		// Chiudo il Context
 		appContext.close();
