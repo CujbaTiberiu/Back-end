@@ -7,21 +7,31 @@ import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.Value;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Data
 public class Ordine {
 	
 	private Integer numeroOrdine;
-	private Integer numeroCoperti;
-	private LocalDateTime oraAcquisizione;
+	private Tavolo tavolo;
+	List<FoodItem> listaOrdine;
 	private StatoOrdine stato;
-	private double sommaCosto;
-	List<FoodItem> listaOrdine = new ArrayList<FoodItem>();
+	private Integer numeroCoperti = 1;
+	private LocalDateTime oraAcquisizione;
+	private double costoCoperto;
 	
-	public void aggiungiCibo(FoodItem foodItem) {
-	    listaOrdine.add(foodItem);
+	
+	public Ordine(Integer numeroOrdine, Tavolo tavolo, Integer numeroCoperti, double costoCoperto) {
+		super();
+		this.numeroOrdine = numeroOrdine;
+		this.tavolo = tavolo;
+		this.tavolo.setStato(true);
+		this.listaOrdine = new ArrayList<FoodItem>();
+		this.stato = StatoOrdine.IN_CORSO;
+		this.numeroCoperti = numeroCoperti;
+		this.oraAcquisizione = LocalDateTime.now();
+		this.costoCoperto = costoCoperto;
+		
 	}
 	
 	public String mostraOrdine() {
@@ -32,9 +42,11 @@ public class Ordine {
 	
 	public double contoTotale() {
 	    double sommaCosto = 0;
-	    for (FoodItem o : listaOrdine) {
-	        sommaCosto += o.getPrice();
+	    double costoCoperti = costoCoperto * numeroCoperti;
+	    for (FoodItem f : listaOrdine) {
+	        sommaCosto += f.getPrice();
 	    }
-	    return sommaCosto;
+	    return sommaCosto + costoCoperti;
 	}
+
 }

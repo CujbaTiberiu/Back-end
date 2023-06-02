@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="lombok.Getter"/>
     <fullyQualifiedTypeName name="lombok.Setter"/>
     <fullyQualifiedTypeName name="lombok.ToString"/>
     <fullyQualifiedTypeName name="ch.qos.logback.core.net.SyslogOutputStream"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="com.epi.GodFathersPizzaday2.Model.Tavolo"/>
     <fullyQualifiedTypeName name="com.epi.GodFathersPizzaday2.Configuration.MenuConfiguration"/>
     <fullyQualifiedTypeName name="com.epi.GodFathersPizzaday2.Model.Menu"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.SpringApplication"/>
 </qualifiedTypeNameHistroy>

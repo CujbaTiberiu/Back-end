@@ -1,18 +1,14 @@
 package com.epi.GodFathersPizzaday2.Configuration;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
 import com.epi.GodFathersPizzaday2.Model.Cheese;
 import com.epi.GodFathersPizzaday2.Model.Drink;
-import com.epi.GodFathersPizzaday2.Model.GestioneOrdini;
 import com.epi.GodFathersPizzaday2.Model.Gift;
 import com.epi.GodFathersPizzaday2.Model.Ham;
 import com.epi.GodFathersPizzaday2.Model.Lemonade;
 import com.epi.GodFathersPizzaday2.Model.Menu;
 import com.epi.GodFathersPizzaday2.Model.Mug;
 import com.epi.GodFathersPizzaday2.Model.Onions;
-import com.epi.GodFathersPizzaday2.Model.Ordine;
 import com.epi.GodFathersPizzaday2.Model.Pineapple;
 import com.epi.GodFathersPizzaday2.Model.Pizza;
 import com.epi.GodFathersPizzaday2.Model.PizzaFamilySize;
@@ -22,7 +18,6 @@ import com.epi.GodFathersPizzaday2.Model.PizzaSalami;
 import com.epi.GodFathersPizzaday2.Model.PizzaTopping;
 import com.epi.GodFathersPizzaday2.Model.Salami;
 import com.epi.GodFathersPizzaday2.Model.Shirt;
-import com.epi.GodFathersPizzaday2.Model.Tavolo;
 import com.epi.GodFathersPizzaday2.Model.Water;
 import com.epi.GodFathersPizzaday2.Model.Wine;
 
@@ -126,31 +121,6 @@ public class MenuConfiguration {
 	public PizzaTopping salamiPizzaTopping() {
 		return new Salami();
 	}
-	
-	@Bean
-	@Scope("prototype")
-	public GestioneOrdini gestioneOrdini() {
-		
-		GestioneOrdini go = new GestioneOrdini();
-		go.setOrdine(creaOrdine());
-		go.setTavolo(creaTavolo());
-		
-		return go;
-	}
-	
-	@Bean
-	@Scope("prototype")
-	public Ordine creaOrdine() {
-		return new Ordine();
-	}
-	
-	
-	@Bean
-	@Scope("prototype")
-	public Tavolo creaTavolo() {
-		return new Tavolo();
-	}
-	
 	
 	
 

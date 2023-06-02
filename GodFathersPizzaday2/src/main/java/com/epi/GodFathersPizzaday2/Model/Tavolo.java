@@ -1,16 +1,20 @@
 package com.epi.GodFathersPizzaday2.Model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Data
 public class Tavolo {
 	
-	private Integer numero;
+	private Integer numeroTavolo;
 	private Integer numeroCoperti;
-	private StatoTavolo stato;
+	private boolean stato = false;
+	
+	
+	public Tavolo(Integer numeroTavolo, Integer numeroCoperti) {
+		super();
+		this.numeroTavolo = numeroTavolo;
+		this.numeroCoperti = numeroCoperti;
+	}
+	
 	
 }
