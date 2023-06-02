@@ -39,6 +39,8 @@ public class Postazione {
 	@ManyToOne
 	@JoinColumn(name = "edificio_id")
     private Edificio edificio;
+	
+	private boolean prenotato;
 
 	public Postazione(String descrizione, int numeroMaxOccupanti, TipoPostazione tipo, Edificio edificio) {
 		super();
@@ -46,6 +48,7 @@ public class Postazione {
 		this.numeroMaxOccupanti = numeroMaxOccupanti;
 		this.tipo = tipo;
 		this.edificio = edificio;
+		this.prenotato = false;
 	}
 	
 	

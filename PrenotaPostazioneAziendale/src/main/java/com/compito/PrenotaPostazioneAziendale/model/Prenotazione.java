@@ -36,16 +36,17 @@ public class Prenotazione {
     @JoinColumn(name = "utente_id")
 	private Utente utente;
 
-	private LocalDate giornoPrenotazione;
+	private LocalDate inizioPrenotazione;
 	
 	private LocalDate finePrenotazione;
 
-	public Prenotazione(Postazione postazione, Utente utente, LocalDate giornoPrenotazione) {
+	public Prenotazione(Postazione postazione, Utente utente, LocalDate inizioPrenotazione) {
 		super();
 		this.postazione = postazione;
+		this.postazione.setPrenotato(true);
 		this.utente = utente;
-		this.giornoPrenotazione = giornoPrenotazione;
-		this.finePrenotazione = giornoPrenotazione.plusDays(1);
+		this.inizioPrenotazione = inizioPrenotazione;
+		this.finePrenotazione = inizioPrenotazione.plusDays(1);
 	}
 	
 	

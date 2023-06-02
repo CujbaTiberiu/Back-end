@@ -15,7 +15,7 @@ public class PrenotazioneConfiguration {
 
 	@Bean
 	@Scope("prototype")
-	public Prenotazione newPrenotazione(Postazione postazione, Utente utente, LocalDate giornoPrenotazione) {
-		return new Prenotazione(postazione, utente, giornoPrenotazione);
+	public Prenotazione newPrenotazione(Postazione postazione, Utente utente, LocalDate inizioPrenotazione) {
+		return new Prenotazione(postazione, utente, inizioPrenotazione);
 	}
 }

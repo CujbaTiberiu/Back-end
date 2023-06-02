@@ -24,17 +24,17 @@ public class PrenotazioneService {
 	
 	public void insertPostazione(Prenotazione p) {
 		db.save(p);
-		System.out.println("Prenotazione per il giorno " + p.getGiornoPrenotazione() + " inserito nel DB!!!");
+		System.out.println("Prenotazione per il giorno " + p.getInizioPrenotazione() + " inserito nel DB!!!");
 	}
 		
 	public void updatePostazione(Prenotazione p) {
 		db.save(p);
-		System.out.println("Prenotazione per il giorno " + p.getGiornoPrenotazione() + " modificato nel DB!!!");
+		System.out.println("Prenotazione per il giorno " + p.getInizioPrenotazione() + " modificato nel DB!!!");
 	}
 		
 	public void deletePostazione(Prenotazione p) {
 		db.delete(p);
-		System.out.println("Prenotazione per il giorno " + p.getGiornoPrenotazione() + " eliminato nel DB!!!");
+		System.out.println("Prenotazione per il giorno " + p.getInizioPrenotazione() + " eliminato nel DB!!!");
 	}
 		
 	public Prenotazione getByID(long id) {
