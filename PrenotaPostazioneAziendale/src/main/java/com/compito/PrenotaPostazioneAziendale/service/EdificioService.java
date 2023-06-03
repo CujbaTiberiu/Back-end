@@ -16,22 +16,27 @@ public class EdificioService {
 	@Autowired EdificioDAORepository db;
 	
 	@Autowired @Qualifier("newEdificio") ObjectProvider<Edificio> newEdificioProvider;
+	@Autowired @Qualifier("fakeEdificio") ObjectProvider<Edificio> fakeEdificioProvider;
 	
-	public Edificio createFakeUtente() {
+	public Edificio createNewEdificio() {
 		return newEdificioProvider.getObject();
 	}
 	
-	public void insertUtente(Edificio e) {
+	public Edificio createFakeEdificio() {
+		return fakeEdificioProvider.getObject();
+	}
+	
+	public void insertEdificio(Edificio e) {
 		db.save(e);
 		System.out.println("Edificio " + e.getNome() + " inserito nel DB!!!");
 	}
 	
-	public void updateUtente(Edificio e) {
+	public void updateEdificio(Edificio e) {
 		db.save(e);
 		System.out.println("Edificio " + e.getNome() + " modificato nel DB!!!");
 	}
 	
-	public void deleteUtente(Edificio e) {
+	public void deleteEdificio(Edificio e) {
 		db.delete(e);
 		System.out.println("Edificio " + e.getNome() + " eliminato nel DB!!!");
 	}

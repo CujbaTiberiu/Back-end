@@ -4,6 +4,7 @@ import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -36,7 +37,7 @@ public class Utente {
 	@Column(nullable = false, unique = true)
 	private String email;
 
-	@OneToMany(mappedBy = "utente")
+	@OneToMany(mappedBy = "utente", fetch = FetchType.EAGER)
 	private List<Prenotazione> prenotazioni;
 
 	public Utente(String userName, String nomeCompleto, String email) {

@@ -6,7 +6,10 @@ import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+
+import com.compito.PrenotaPostazioneAziendale.model.Edificio;
 import com.compito.PrenotaPostazioneAziendale.model.Postazione;
+import com.compito.PrenotaPostazioneAziendale.model.TipoPostazione;
 import com.compito.PrenotaPostazioneAziendale.repository.PostazioneDAORepository;
 
 @Service
@@ -16,7 +19,7 @@ public class PostazioneService {
 	
 	@Autowired @Qualifier("newPostazione") ObjectProvider<Postazione> newPostazioneProvider;
 	
-	public Postazione createNewProvider() {
+	public Postazione createNewPostazione(String string, int i, TipoPostazione openspace, Edificio e1) {
 		return newPostazioneProvider.getObject();
 	}
 

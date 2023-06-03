@@ -18,8 +18,14 @@ public class UtenteConfiguration {
 		Faker fake = Faker.instance(new Locale("it-IT"));
 		Utente userFake = new Utente();
 		userFake.setNomeCompleto(fake.name().fullName());
-		userFake.setUserName( "#" + userFake.getNomeCompleto());
-		userFake.setEmail(userFake.getNomeCompleto() + "@fakeMail.com");
+		userFake.setUserName( "#" + userFake.getNomeCompleto().replaceAll("\\s+","").toLowerCase());
+		userFake.setEmail(userFake.getNomeCompleto().replaceAll("\\s+","").toLowerCase() + "@fakeMail.com");
 		return userFake;
+	}
+	
+	@Bean
+	@Scope("prototype")
+	public Utente customUtente(String userName, String nomeCompleto, String email) {
+		return new Utente(userName, nomeCompleto, email);
 	}
 }

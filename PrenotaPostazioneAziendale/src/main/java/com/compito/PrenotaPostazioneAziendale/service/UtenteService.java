@@ -16,10 +16,14 @@ public class UtenteService {
 	@Autowired UtenteDAORepository db;
 	
 	@Autowired @Qualifier("fakeUtente") ObjectProvider<Utente> fakeUtenteProvider;
+	//@Autowired @Qualifier("customUtente") ObjectProvider<Utente> customUtenteProvider;
 	
 	public Utente createFakeUtente() {
 		return fakeUtenteProvider.getObject();
 	}
+	//public Utente createCustomUtente(String userName, String nomeCompleto, String email) {
+	//	return customUtenteProvider.getObject();
+	//}
 	
 	public void insertUtente(Utente u) {
 		db.save(u);

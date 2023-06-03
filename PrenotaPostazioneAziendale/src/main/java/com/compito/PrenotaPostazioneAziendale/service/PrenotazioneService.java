@@ -16,23 +16,23 @@ public class PrenotazioneService {
 
 	@Autowired PrenotazioneDAORepository db;
 	
-	@Autowired @Qualifier("newPostazione") ObjectProvider<Prenotazione> newPrenotazioneProvider;
+	@Autowired @Qualifier("newPrenotazione") ObjectProvider<Prenotazione> newPrenotazioneProvider;
 	
 	public Prenotazione createNewPrenotazione() {
 		return newPrenotazioneProvider.getObject();
 	}
 	
-	public void insertPostazione(Prenotazione p) {
+	public void insertPrenotazione(Prenotazione p) {
 		db.save(p);
 		System.out.println("Prenotazione per il giorno " + p.getInizioPrenotazione() + " inserito nel DB!!!");
 	}
 		
-	public void updatePostazione(Prenotazione p) {
+	public void updatePrenotazione(Prenotazione p) {
 		db.save(p);
 		System.out.println("Prenotazione per il giorno " + p.getInizioPrenotazione() + " modificato nel DB!!!");
 	}
 		
-	public void deletePostazione(Prenotazione p) {
+	public void deletePrenotazione(Prenotazione p) {
 		db.delete(p);
 		System.out.println("Prenotazione per il giorno " + p.getInizioPrenotazione() + " eliminato nel DB!!!");
 	}
