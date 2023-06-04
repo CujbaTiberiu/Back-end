@@ -18,9 +18,14 @@ public class PostazioneService {
 	@Autowired PostazioneDAORepository db;
 	
 	@Autowired @Qualifier("newPostazione") ObjectProvider<Postazione> newPostazioneProvider;
+	@Autowired @Qualifier("setNewPostazione") ObjectProvider<Postazione> setNewPostazioneProvider;
 	
-	public Postazione createNewPostazione(String string, int i, TipoPostazione openspace, Edificio e1) {
+	public Postazione createNewPostazione(String descrizione, int numeroMaxOccupanti, TipoPostazione tipo, Edificio edificio) {
 		return newPostazioneProvider.getObject();
+	}
+	
+	public Postazione createSetNewPostazione() {
+		return setNewPostazioneProvider.getObject();
 	}
 
 	public void insertPostazione(Postazione p) {
@@ -44,6 +49,11 @@ public class PostazioneService {
 		
 	public List<Postazione> getAll() {
 		return db.findAll();
+	}
+	
+	public List<Postazione> findByCittaAndTipo(String citta, TipoPostazione tipo){
+		return db.findByCittaAndTipo(citta, tipo);
+		
 	}
 	
 }

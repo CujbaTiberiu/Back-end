@@ -46,6 +46,12 @@ public class Utente {
 		this.nomeCompleto = nomeCompleto;
 		this.email = email;
 	}
+
+	@Override
+	public String toString() {
+		return "Utente [id=" + id + ", userName=" + userName + ", nomeCompleto=" + nomeCompleto + ", email=" + email
+				+ "]";
+	}
 	
 	
 }

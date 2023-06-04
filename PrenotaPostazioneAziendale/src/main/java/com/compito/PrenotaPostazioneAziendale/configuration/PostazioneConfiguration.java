@@ -2,6 +2,7 @@ package com.compito.PrenotaPostazioneAziendale.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
 
 import com.compito.PrenotaPostazioneAziendale.model.Edificio;
@@ -18,4 +19,10 @@ public class PostazioneConfiguration {
 		return new Postazione(descrizione, numeroMaxOccupanti, tipo, edificio);
 	}
 	
+	@Bean
+	@Scope("prototype")
+	@Primary
+	public Postazione setNewPostazione() {
+		return new Postazione();
+	}
 }

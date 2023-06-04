@@ -4,6 +4,7 @@ import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -36,7 +37,7 @@ public class Edificio {
 	@Column(nullable = false)
 	private String citta;
 	
-	@OneToMany(mappedBy = "edificio")
+	@OneToMany(mappedBy = "edificio", fetch = FetchType.EAGER)
 	private List<Postazione> postazioni;
 	
 	public Edificio(String nome, String indirizzo, String citta) {
@@ -45,6 +46,12 @@ public class Edificio {
 		this.indirizzo = indirizzo;
 		this.citta = citta;
 	}
+	
+	@Override
+	public String toString() {
+	    return "Edificio [id=" + id + ", nome=" + nome + ", indirizzo=" + indirizzo + ", citta=" + citta + "]";
+	}
+
 }
 
 

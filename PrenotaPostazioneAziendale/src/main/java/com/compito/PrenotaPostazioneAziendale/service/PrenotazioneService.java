@@ -1,5 +1,6 @@
 package com.compito.PrenotaPostazioneAziendale.service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.ObjectProvider;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.compito.PrenotaPostazioneAziendale.model.Postazione;
 import com.compito.PrenotaPostazioneAziendale.model.Prenotazione;
+import com.compito.PrenotaPostazioneAziendale.model.Utente;
 import com.compito.PrenotaPostazioneAziendale.repository.PrenotazioneDAORepository;
 
 @Service
@@ -17,9 +19,13 @@ public class PrenotazioneService {
 	@Autowired PrenotazioneDAORepository db;
 	
 	@Autowired @Qualifier("newPrenotazione") ObjectProvider<Prenotazione> newPrenotazioneProvider;
+	@Autowired @Qualifier("newSetPrenotazione") ObjectProvider<Prenotazione> newSetPrenotazioneProvider;
 	
-	public Prenotazione createNewPrenotazione() {
+	public Prenotazione createNewPrenotazione(Postazione postazione, Utente utente) {
 		return newPrenotazioneProvider.getObject();
+	}
+	public Prenotazione createSetNewPrenotazione() {
+		return newSetPrenotazioneProvider.getObject();
 	}
 	
 	public void insertPrenotazione(Prenotazione p) {

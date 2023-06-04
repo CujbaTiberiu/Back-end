@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
 
 import com.compito.PrenotaPostazioneAziendale.model.Postazione;
@@ -15,7 +16,14 @@ public class PrenotazioneConfiguration {
 
 	@Bean
 	@Scope("prototype")
-	public Prenotazione newPrenotazione(Postazione postazione, Utente utente, LocalDate inizioPrenotazione) {
-		return new Prenotazione(postazione, utente, inizioPrenotazione);
+	@Primary
+	public Prenotazione newPrenotazione(Postazione postazione, Utente utente) {
+		return new Prenotazione(postazione, utente);
+	}
+	
+	@Bean
+	@Scope("prototype")
+	public Prenotazione newSetPrenotazione() {
+		return new Prenotazione();
 	}
 }

@@ -13,7 +13,9 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "postazioni")
@@ -40,6 +42,7 @@ public class Postazione {
 	@JoinColumn(name = "edificio_id")
     private Edificio edificio;
 	
+	
 	private boolean prenotato;
 
 	public Postazione(String descrizione, int numeroMaxOccupanti, TipoPostazione tipo, Edificio edificio) {
@@ -50,7 +53,21 @@ public class Postazione {
 		this.edificio = edificio;
 		this.prenotato = false;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "Postazione [id=" + id + ", descrizione=" + descrizione + ", numeroMaxOccupanti=" + numeroMaxOccupanti
+				+ ", tipo=" + tipo + ", prenotato=" + prenotato + "]";
+	}
+
+
+	public boolean getPrenotato() {
+		return prenotato;
+	}
+
+	public void setPrenotato(boolean prenotato) {
+		this.prenotato = prenotato;
+	}
+
 	
 }

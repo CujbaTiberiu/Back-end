@@ -4,6 +4,7 @@ import java.util.Locale;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
 
 import com.compito.PrenotaPostazioneAziendale.model.Utente;
@@ -14,6 +15,7 @@ public class UtenteConfiguration {
 
 	@Bean
 	@Scope("prototype")
+	@Primary
 	public Utente fakeUtente() {
 		Faker fake = Faker.instance(new Locale("it-IT"));
 		Utente userFake = new Utente();
@@ -25,7 +27,7 @@ public class UtenteConfiguration {
 	
 	@Bean
 	@Scope("prototype")
-	public Utente customUtente(String userName, String nomeCompleto, String email) {
-		return new Utente(userName, nomeCompleto, email);
+	public Utente customUtente() {
+		return new Utente();
 	}
 }

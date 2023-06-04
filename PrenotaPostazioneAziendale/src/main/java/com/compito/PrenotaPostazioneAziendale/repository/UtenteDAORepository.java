@@ -11,4 +11,5 @@ import com.compito.PrenotaPostazioneAziendale.model.Utente;
 public interface UtenteDAORepository extends JpaRepository<Utente, Long>{
 	
 	public List<Utente> findByUserName(String username);
+	
 }
