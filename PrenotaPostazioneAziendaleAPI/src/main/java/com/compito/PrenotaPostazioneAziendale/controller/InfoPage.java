@@ -51,15 +51,15 @@ public class InfoPage {
 	}
 	
 	@PostMapping("/utenti")
-	public Utente createProduct(@RequestBody Utente p) {
-		Utente product = utenteService.insertUtente(p);
-		return product;
+	public Utente createProduct(@RequestBody Utente u) {
+		Utente utente = utenteService.insertUtente(u);
+		return utente;
 	}
 	
 	@PutMapping("/utenti/{id}")
-	public Utente updateProduct(@RequestBody Utente p, @PathVariable Long id) {
-		Utente product = utenteService.updateUtente(p);
-		return product;
+	public Utente updateProduct(@RequestBody Utente u, @PathVariable Long id) {
+		Utente utente = utenteService.updateUtente(u);
+		return utente;
 	}
 	
 	@DeleteMapping("/utenti/{id}")
