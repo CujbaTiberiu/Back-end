@@ -10,4 +10,5 @@ public interface UtenteDAORepository extends JpaRepository<Utente, Long>{
 	
 	public Utente findByUserName(String username);
 	
+	public boolean existsByEmail(String email);
 }
