@@ -50,7 +50,7 @@ public class UtenteService {
 	
 	public Utente getByID(long id) {
 		if(!db.existsById(id)) {
-			throw new EntityExistsException("User doesn't exist!");
+			throw new EntityNotFoundException("User doesn't exist!");
 		}
 		return db.findById(id).get();
 	}

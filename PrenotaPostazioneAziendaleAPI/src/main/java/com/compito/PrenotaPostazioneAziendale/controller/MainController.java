@@ -17,7 +17,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.compito.PrenotaPostazioneAziendale.model.Edificio;
+import com.compito.PrenotaPostazioneAziendale.model.Postazione;
 import com.compito.PrenotaPostazioneAziendale.model.Utente;
+import com.compito.PrenotaPostazioneAziendale.service.EdificioService;
+import com.compito.PrenotaPostazioneAziendale.service.PostazioneService;
 import com.compito.PrenotaPostazioneAziendale.service.UtenteService;
 
 import jakarta.persistence.EntityNotFoundException;
@@ -27,6 +31,8 @@ import jakarta.persistence.EntityNotFoundException;
 public class MainController { 
 	
 	@Autowired UtenteService utenteService;
+	@Autowired PostazioneService postazioneService;
+	@Autowired EdificioService edificioService;
 	
 	@GetMapping("/info/{lang}")
 	public @ResponseBody String getInfo(@PathVariable String lang) {
@@ -52,20 +58,75 @@ public class MainController {
 		return ResponseEntity.ok(utenteService.getByID(id));
 	}
 	
-	
 	@PostMapping("/utenti")
-	public ResponseEntity<Utente> createProduct(@RequestBody Utente u) {
+	public ResponseEntity<Utente> createUser(@RequestBody Utente u) {
 		return ResponseEntity.ok(utenteService.insertUtente(u));
 	}
 	
 	@PutMapping("/utenti/{id}")
-	public ResponseEntity<Utente> updateProduct(@RequestBody Utente u, @PathVariable Long id) {
+	public ResponseEntity<Utente> updateUser(@RequestBody Utente u, @PathVariable Long id) {
 		return ResponseEntity.ok(utenteService.updateUtente(u));
 	}
 	
 	@DeleteMapping("/utenti/{id}")
 	public ResponseEntity<String> deleteProduct(@PathVariable Long id) {
 		return ResponseEntity.ok(utenteService.deleteUtente(id));
+	}
+	
+	
+	
+	@GetMapping("/postazioni")
+	public ResponseEntity<List<Postazione>> getPostazioniAll() {
+		return ResponseEntity.ok(postazioneService.getAll());
+	}
+	
+	@GetMapping("/postazioni/{id}")
+	public ResponseEntity<?> getPostazioneByID(@PathVariable long id) {
+		return ResponseEntity.ok(postazioneService.getByID(id));
+	}
+	
+	
+	@PostMapping("/postazioni")
+	public ResponseEntity<Postazione> createPostazione(@RequestBody Postazione p) {
+		return ResponseEntity.ok(postazioneService.insertPostazione(p));
+	}
+	
+	@PutMapping("/postazioni/{id}")
+	public ResponseEntity<Postazione> updatePostazione(@RequestBody Postazione p, @PathVariable Long id) {
+		return ResponseEntity.ok(postazioneService.updatePostazione(p, id));
+	}
+	
+	@DeleteMapping("/postazioni/{id}")
+	public ResponseEntity<String> deletePostazione(@PathVariable Long id) {
+		return ResponseEntity.ok(postazioneService.deletePostazione(id));
+		
+	}
+	
+	
+	@GetMapping("/edifici")
+	public ResponseEntity<List<Edificio>> getEdificiAll() {
+		return ResponseEntity.ok(edificioService.getAll());
+	}
+	
+	@GetMapping("/edifici/{id}")
+	public ResponseEntity<?> getEdificioByID(@PathVariable long id) {
+		return ResponseEntity.ok(edificioService.getByID(id));
+	}
+	
+	
+	@PostMapping("/edifici")
+	public ResponseEntity<Edificio> createEdificio(@RequestBody Edificio e) {
+		return ResponseEntity.ok(edificioService.insertEdificio(e));
+	}
+	
+	@PutMapping("/edifici/{id}")
+	public ResponseEntity<Edificio> updateEdificio(@RequestBody Edificio e, @PathVariable Long id) {
+		return ResponseEntity.ok(edificioService.updateEdificio(e, id));
+	}
+	
+	@DeleteMapping("/edifici/{id}")
+	public ResponseEntity<String> deleteEdificio(@PathVariable Long id) {
+		return ResponseEntity.ok(edificioService.deleteEdificio(id));
 		
 	}
 

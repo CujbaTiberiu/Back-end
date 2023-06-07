@@ -10,38 +10,43 @@ import org.springframework.stereotype.Service;
 import com.compito.PrenotaPostazioneAziendale.model.Edificio;
 import com.compito.PrenotaPostazioneAziendale.repository.EdificioDAORepository;
 
+import jakarta.persistence.EntityExistsException;
+import jakarta.persistence.EntityNotFoundException;
+
 @Service
 public class EdificioService {
 
 	@Autowired EdificioDAORepository db;
+
 	
-	@Autowired @Qualifier("newEdificio") ObjectProvider<Edificio> newEdificioProvider;
-	@Autowired @Qualifier("fakeEdificio") ObjectProvider<Edificio> fakeEdificioProvider;
-	
-	public Edificio createNewEdificio() {
-		return newEdificioProvider.getObject();
-	}
-	
-	public Edificio createFakeEdificio() {
-		return fakeEdificioProvider.getObject();
-	}
-	
-	public void insertEdificio(Edificio e) {
+	public Edificio insertEdificio(Edificio e) {
+		if(db.existsByIndirizzo(e.getIndirizzo())) {
+			throw new EntityExistsException("Edificio with this address already exists!");
+		}
 		db.save(e);
-		System.out.println("Edificio " + e.getNome() + " inserito nel DB!!!");
+		return e;
 	}
 	
-	public void updateEdificio(Edificio e) {
+	public Edificio updateEdificio(Edificio e , Long id) {
+		if(!db.existsById(id)) {
+			throw new EntityNotFoundException("Edificio doesn't exist!");
+		}
 		db.save(e);
-		System.out.println("Edificio " + e.getNome() + " modificato nel DB!!!");
+		return e;
 	}
 	
-	public void deleteEdificio(Edificio e) {
-		db.delete(e);
-		System.out.println("Edificio " + e.getNome() + " eliminato nel DB!!!");
+	public String deleteEdificio(Long id) {
+		if(!db.existsById(id)) {
+			throw new EntityNotFoundException("Edificio doesn't exist!");
+		}
+		db.deleteById(id);
+		return "Edificio deleted!";
 	}
 	
 	public Edificio getByID(long id) {
+		if(!db.existsById(id)) {
+			throw new EntityNotFoundException("Edificio doesn't exist!");
+		}
 		return db.findById(id).get();
 	}
 	

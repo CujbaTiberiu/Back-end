@@ -13,11 +13,11 @@ public class MyExceptionHandler extends ResponseEntityExceptionHandler{
 
 	@ExceptionHandler(EntityExistsException.class)
 	public ResponseEntity<String> manageEntityExistsException(EntityExistsException e) {
-		return new ResponseEntity<String>(e.getMessage() + " MyExcpetionHandler!", HttpStatus.NOT_FOUND);
+		return new ResponseEntity<String>(e.getMessage() + " MyExceptionHandler!", HttpStatus.NOT_FOUND);
 	}
 	
 	@ExceptionHandler(EntityNotFoundException.class)
 	public ResponseEntity<String> manageEntityExistsException(EntityNotFoundException e) {
-		return new ResponseEntity<String>(e.getMessage() + " MyExcpetionHandler!", HttpStatus.NOT_FOUND);
+		return new ResponseEntity<String>(e.getMessage() + " MyExceptionHandler!", HttpStatus.NOT_FOUND);
 	}
 }

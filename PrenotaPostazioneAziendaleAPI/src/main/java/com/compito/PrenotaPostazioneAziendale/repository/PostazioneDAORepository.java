@@ -14,4 +14,11 @@ public interface PostazioneDAORepository extends JpaRepository<Postazione, Long>
 
 	@Query("SELECT p FROM Postazione p WHERE p.edificio.citta = :citta AND p.tipo = :tipo")
 	public List<Postazione> findByCittaAndTipo(String citta, TipoPostazione tipo);
+	
+	public boolean existsById(long id);
+	
+	@Query("SELECT p FROM Postazione p WHERE p.edificio.citta = :citta ")
+	public boolean existsByCitta(String citta);
+	
+	public boolean existsByTipo(TipoPostazione tipo);
 }

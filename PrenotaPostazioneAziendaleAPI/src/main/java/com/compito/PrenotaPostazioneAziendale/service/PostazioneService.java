@@ -12,38 +12,43 @@ import com.compito.PrenotaPostazioneAziendale.model.Postazione;
 import com.compito.PrenotaPostazioneAziendale.model.TipoPostazione;
 import com.compito.PrenotaPostazioneAziendale.repository.PostazioneDAORepository;
 
+import jakarta.persistence.EntityExistsException;
+import jakarta.persistence.EntityNotFoundException;
+
 @Service
 public class PostazioneService {
 
 	@Autowired PostazioneDAORepository db;
 	
-	@Autowired @Qualifier("newPostazione") ObjectProvider<Postazione> newPostazioneProvider;
-	@Autowired @Qualifier("setNewPostazione") ObjectProvider<Postazione> setNewPostazioneProvider;
-	
-	public Postazione createNewPostazione(String descrizione, int numeroMaxOccupanti, TipoPostazione tipo, Edificio edificio) {
-		return newPostazioneProvider.getObject();
-	}
-	
-	public Postazione createSetNewPostazione() {
-		return setNewPostazioneProvider.getObject();
-	}
 
-	public void insertPostazione(Postazione p) {
+	public Postazione insertPostazione(Postazione p) {
+		if(db.existsById(p.getId())) {
+			throw new EntityExistsException("Postazione already exists!");
+		}
 		db.save(p);
-		System.out.println("Postazione " + p.getDescrizione() + " inserito nel DB!!!");
+		return p;
 	}
 		
-	public void updatePostazione(Postazione p) {
+	public Postazione updatePostazione(Postazione p, Long id) {
+		if(!db.existsById(id)) {
+			throw new EntityNotFoundException("Postazione doesn't exist!");
+		}
 		db.save(p);
-		System.out.println("Postazione " + p.getDescrizione() + " modificato nel DB!!!");
+		return p;
 	}
 		
-	public void deletePostazione(Postazione p) {
-		db.delete(p);
-		System.out.println("Postazione " + p.getDescrizione() + " eliminato nel DB!!!");
+	public String deletePostazione(Long id) {
+		if(!db.existsById(id)) {
+			throw new EntityNotFoundException("Postazione doesn't exist!");
+		}
+		db.deleteById(id);
+		return "Postazione deleted!";
 	}
 		
-	public Postazione getByID(long id) {
+	public Postazione getByID(Long id) {
+		if(!db.existsById(id)) {
+			throw new EntityNotFoundException("Postazione doesn't exist!");
+		}
 		return db.findById(id).get();
 	}
 		
@@ -52,8 +57,10 @@ public class PostazioneService {
 	}
 	
 	public List<Postazione> findByCittaAndTipo(String citta, TipoPostazione tipo){
+		if(!db.existsByCitta(citta) && !db.existsByTipo(tipo)) {
+			throw new EntityNotFoundException("Postazione with citta and tipo selected doesn't exist!");
+		}
 		return db.findByCittaAndTipo(citta, tipo);
-		
 	}
 	
 }

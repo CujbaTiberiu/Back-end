@@ -8,4 +8,5 @@ import com.compito.PrenotaPostazioneAziendale.model.Edificio;
 @Repository
 public interface EdificioDAORepository extends JpaRepository<Edificio, Long>{
 
+	public boolean existsByIndirizzo(String indirizzo);
 }
