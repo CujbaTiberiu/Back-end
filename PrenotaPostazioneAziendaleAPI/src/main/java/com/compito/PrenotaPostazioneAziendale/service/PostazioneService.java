@@ -1,6 +1,7 @@
 package com.compito.PrenotaPostazioneAziendale.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,11 +46,11 @@ public class PostazioneService {
 		return "Postazione deleted!";
 	}
 		
-	public Postazione getByID(Long id) {
+	public Optional<Postazione> getByID(Long id) {
 		if(!db.existsById(id)) {
 			throw new EntityNotFoundException("Postazione doesn't exist!");
 		}
-		return db.findById(id).get();
+		return db.findById(id);
 	}
 		
 	public List<Postazione> getAll() {

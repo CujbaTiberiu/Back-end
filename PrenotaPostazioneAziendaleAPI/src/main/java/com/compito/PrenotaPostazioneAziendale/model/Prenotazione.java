@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.compito.PrenotaPostazioneAziendale.repository.PostazioneDAORepository;
 import com.compito.PrenotaPostazioneAziendale.service.PostazioneService;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -35,10 +36,12 @@ public class Prenotazione {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
+	//@JsonIgnore
     @ManyToOne
     @JoinColumn(name = "postazione_id")
 	private Postazione postazione;
 	
+	//@JsonIgnore
     @ManyToOne
     @JoinColumn(name = "utente_id")
 	private Utente utente;

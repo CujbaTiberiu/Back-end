@@ -1,49 +1,67 @@
 package com.compito.PrenotaPostazioneAziendale.service;
 
-import java.time.LocalDate;
-import java.util.List;
 
-import org.springframework.beans.factory.ObjectProvider;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import com.compito.PrenotaPostazioneAziendale.exception.PrenotazioneException;
 import com.compito.PrenotaPostazioneAziendale.model.Postazione;
 import com.compito.PrenotaPostazioneAziendale.model.Prenotazione;
 import com.compito.PrenotaPostazioneAziendale.model.Utente;
 import com.compito.PrenotaPostazioneAziendale.repository.PrenotazioneDAORepository;
+import com.compito.PrenotaPostazioneAziendale.repository.UtenteDAORepository;
+
+import jakarta.persistence.EntityNotFoundException;
 
 @Service
 public class PrenotazioneService {
 
 	@Autowired PrenotazioneDAORepository db;
+	@Autowired UtenteDAORepository dbUtente;
 	
-	@Autowired @Qualifier("newPrenotazione") ObjectProvider<Prenotazione> newPrenotazioneProvider;
-	@Autowired @Qualifier("newSetPrenotazione") ObjectProvider<Prenotazione> newSetPrenotazioneProvider;
 	
-	public Prenotazione createNewPrenotazione(Postazione postazione, Utente utente) {
-		return newPrenotazioneProvider.getObject();
-	}
-	public Prenotazione createSetNewPrenotazione() {
-		return newSetPrenotazioneProvider.getObject();
-	}
-	
-	public void insertPrenotazione(Prenotazione p) {
+	public Prenotazione insertPrenotazione(Utente utente, Postazione postazione) {
+		if(postazione.getPrenotato() == true) {
+			throw new PrenotazioneException("Postazione already booked!");
+		}
+		if(!dbUtente.existsById(utente.getId())) {
+			throw new EntityNotFoundException("User doesn't exists!");
+		}
+		Prenotazione p = new Prenotazione( postazione, utente);
 		db.save(p);
-		System.out.println("Prenotazione per il giorno " + p.getInizioPrenotazione() + " inserito nel DB!!!");
+		return p;
 	}
 		
-	public void updatePrenotazione(Prenotazione p) {
-		db.save(p);
-		System.out.println("Prenotazione per il giorno " + p.getInizioPrenotazione() + " modificato nel DB!!!");
+	public Prenotazione updatePrenotazione(Prenotazione p, Long id) throws Exception {
+		Optional<Prenotazione> prenotazioneResult = db.findById(id);
+
+		if (prenotazioneResult.isPresent()) {
+			Prenotazione prenotazioneUpdate = prenotazioneResult.get();
+			prenotazioneUpdate.setInizioPrenotazione(p.getInizioPrenotazione());
+			prenotazioneUpdate.setPostazione(p.getPostazione());
+			prenotazioneUpdate.setUtente(p.getUtente());
+			db.save(prenotazioneUpdate);
+			return prenotazioneUpdate;
+		} else {
+			throw new PrenotazioneException("Elemento non aggiornato");
+		}
 	}
 		
-	public void deletePrenotazione(Prenotazione p) {
-		db.delete(p);
-		System.out.println("Prenotazione per il giorno " + p.getInizioPrenotazione() + " eliminato nel DB!!!");
+	public String deletePrenotazione(Long id) {
+		if(!db.existsById(id)) {
+			throw new EntityNotFoundException("Prenotazione doesn't exist!");
+		}
+		db.deleteById(id);
+		return "Prenotazione deleted with success!";
 	}
 		
 	public Prenotazione getByID(long id) {
+		if(!db.existsById(id)) {
+			throw new EntityNotFoundException("Prenotazione doesn't exist!");
+		}
 		return db.findById(id).get();
 	}
 		

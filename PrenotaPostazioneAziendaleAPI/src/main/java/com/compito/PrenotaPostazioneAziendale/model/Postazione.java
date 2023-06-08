@@ -1,5 +1,7 @@
 package com.compito.PrenotaPostazioneAziendale.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -38,6 +40,7 @@ public class Postazione {
 	@Enumerated(EnumType.STRING)
 	private TipoPostazione tipo;
 	
+	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name = "edificio_id")
     private Edificio edificio;

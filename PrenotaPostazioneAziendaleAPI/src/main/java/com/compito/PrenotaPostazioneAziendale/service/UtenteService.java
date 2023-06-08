@@ -1,6 +1,8 @@
 package com.compito.PrenotaPostazioneAziendale.service;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -48,11 +50,11 @@ public class UtenteService {
 		return "User deleted!";
 	}
 	
-	public Utente getByID(long id) {
+	public Optional<Utente> getByID(long id) {
 		if(!db.existsById(id)) {
 			throw new EntityNotFoundException("User doesn't exist!");
 		}
-		return db.findById(id).get();
+		return db.findById(id);
 	}
 	
 	public List<Utente> getAll() {
