@@ -31,7 +31,9 @@ public class PrenotazioneService {
 			throw new EntityNotFoundException("User doesn't exists!");
 		}
 		Prenotazione p = new Prenotazione( postazione, utente);
+		System.out.println("From Service -> " + postazione);
 		db.save(p);
+		System.out.println("From Service -> " + p);
 		return p;
 	}
 		

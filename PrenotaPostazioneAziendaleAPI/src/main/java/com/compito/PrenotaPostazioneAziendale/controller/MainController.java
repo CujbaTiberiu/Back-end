@@ -168,6 +168,7 @@ public class MainController {
 	public ResponseEntity<Prenotazione> createPrenotazione(@RequestParam Long idUser, @RequestParam Long idPostazione) {
 		Optional<Utente> utente = utenteService.getByID(idUser);
 		Optional<Postazione> postazione = postazioneService.getByID(idPostazione);
+		System.out.println(postazione);
 		return ResponseEntity.ok(prenotazioneService.insertPrenotazione(utente.get(), postazione.get()));
 		
 	}
