@@ -7,7 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.compito.GestioneDispositiviAziendali.model.AssignDevice;
+import com.compito.GestioneDispositiviAziendali.model.AssignDevice.AssignDeviceBuilder;
+import com.compito.GestioneDispositiviAziendali.model.Device;
+import com.compito.GestioneDispositiviAziendali.model.TypeStatus;
+import com.compito.GestioneDispositiviAziendali.model.User;
 import com.compito.GestioneDispositiviAziendali.repository.AssignDeviceDAORepository;
+import com.compito.GestioneDispositiviAziendali.repository.DeviceDAORepository;
+import com.compito.GestioneDispositiviAziendali.repository.UserDAORepository;
 
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
@@ -16,16 +22,38 @@ import jakarta.persistence.EntityNotFoundException;
 public class AssignDeviceService {
 
 	@Autowired AssignDeviceDAORepository db;
+	@Autowired DeviceDAORepository dbDevice;
+	@Autowired UserDAORepository dbUser;
 	
 	
-	public AssignDevice insert(AssignDevice ad) {
-		db.save(ad);
-		return ad;
+	public AssignDevice insert(User user, Device device) {
+	
+    if (!dbUser.existsById(user.getId())) {
+        throw new EntityNotFoundException("User doesn't exist!");
+    }
+    if (!dbDevice.existsById(device.getId())) {
+        throw new EntityNotFoundException("Device doesn't exist!");
+    }
+    
+    if(device.getTypeStatus() == TypeStatus.ASSIGNED ||  device.getTypeStatus() == TypeStatus.DISPOSED
+    		||  device.getTypeStatus() == TypeStatus.MAINTENANCE) {
+    	throw new EntityExistsException("Device is not available!");
+    }
+    
+
+    AssignDevice newAssign= new AssignDevice();
+    newAssign.setUser(user);
+    newAssign.setDevice(device);
+    user.getDevice().add(device);
+    device.setTypeStatus(TypeStatus.ASSIGNED);
+    device.setUser(user);
+    db.save(newAssign);
+    return newAssign;
 }
 
-	public AssignDevice update(AssignDevice ad) {
-		if(!db.existsById(ad.getId())) {
-			throw new EntityNotFoundException("AssignDevice doesn't exist!");
+	public AssignDevice update(AssignDevice ad, Long id) {
+		if(!db.existsById(id)) {
+			throw new EntityNotFoundException("Device assignment doesn't exist!");
 		}
 		db.save(ad);
 		return ad;
@@ -33,7 +61,7 @@ public class AssignDeviceService {
 
 	public String delete(Long id) {
 		if(!db.existsById(id)) {
-		throw new EntityExistsException("AssignDevice doesn't exist!");
+		throw new EntityExistsException("Device assignment doesn't exist!");
 	}
 		db.deleteById(id);
 		return "Device deleted!";
@@ -41,7 +69,7 @@ public class AssignDeviceService {
 
 	public Optional<AssignDevice> getByID(long id) {
 		if(!db.existsById(id)) {
-		throw new EntityNotFoundException("AssignDevice doesn't exist!");
+		throw new EntityNotFoundException("Device assignment doesn't exist!");
 		}
 		return db.findById(id);
 	}
@@ -49,5 +77,7 @@ public class AssignDeviceService {
 		public List<AssignDevice> getAll() {
 			return db.findAll();
 		}
+
+	
 	}
 	
