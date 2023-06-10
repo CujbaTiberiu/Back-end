@@ -60,12 +60,24 @@ public class AssignDeviceService {
 	}	
 
 	public String delete(Long id) {
-		if(!db.existsById(id)) {
-		throw new EntityExistsException("Device assignment doesn't exist!");
+	    Optional<AssignDevice> assignDeviceOptional = db.findById(id);
+	    if (assignDeviceOptional.isEmpty()) {
+	        throw new EntityNotFoundException("Device assignment doesn't exist!");
+	    }
+	    
+	    AssignDevice assignDevice = assignDeviceOptional.get();
+	    Device device = assignDevice.getDevice();
+	    User user = assignDevice.getUser();
+	    
+	    device.setTypeStatus(TypeStatus.AVAILABLE);
+	    device.setUser(null);
+	    user.getDevice().remove(device);
+	    
+	    db.deleteById(id);
+	    
+	    return "Assignment deleted!";
 	}
-		db.deleteById(id);
-		return "Device deleted!";
-	}
+
 
 	public Optional<AssignDevice> getByID(long id) {
 		if(!db.existsById(id)) {
