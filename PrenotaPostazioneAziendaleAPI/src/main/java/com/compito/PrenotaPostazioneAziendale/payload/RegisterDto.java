@@ -18,6 +18,7 @@ public class RegisterDto {
     private String username;
     private String email;
     private String password;
+    private String codice;
     // Passagio di ruoli dal client (Facoltativo)
     private Set<String> roles;
 }

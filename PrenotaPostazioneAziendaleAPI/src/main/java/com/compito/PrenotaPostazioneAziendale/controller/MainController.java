@@ -7,6 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,7 +27,7 @@ import com.compito.PrenotaPostazioneAziendale.service.PostazioneService;
 import com.compito.PrenotaPostazioneAziendale.service.PrenotazioneService;
 import com.compito.PrenotaPostazioneAziendale.service.UtenteService;
 import jakarta.persistence.EntityNotFoundException;
-
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api") 
 public class MainController { 
@@ -65,7 +66,7 @@ public class MainController {
 	}
 	
 	@PostMapping("/utenti")
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ADMIN') or hasRole('USER')")
 	public ResponseEntity<Utente> createUser(@RequestBody Utente u) {
 		return ResponseEntity.ok(utenteService.insertUtente(u));
 	}

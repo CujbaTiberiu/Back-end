@@ -68,7 +68,7 @@ public class SecurityConfig {
     	return http.build();
     }
 
-
+/*
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
@@ -81,5 +81,5 @@ public class SecurityConfig {
                         .allowCredentials(true);
             }
         };
-    }
+    }*/
 }

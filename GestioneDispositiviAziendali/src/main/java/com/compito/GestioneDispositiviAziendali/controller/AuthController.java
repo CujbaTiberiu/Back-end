@@ -2,6 +2,7 @@ package com.compito.GestioneDispositiviAziendali.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import com.compito.GestioneDispositiviAziendali.payload.LoginDto;
 import com.compito.GestioneDispositiviAziendali.payload.RegisterDto;
 import com.compito.GestioneDispositiviAziendali.service.AuthService;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {

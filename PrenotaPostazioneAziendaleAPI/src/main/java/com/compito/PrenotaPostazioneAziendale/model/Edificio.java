@@ -2,9 +2,11 @@ package com.compito.PrenotaPostazioneAziendale.model;
 
 import java.util.List;
 
+import com.compito.PrenotaPostazioneAziendale.configuration.CodeConverter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -38,6 +40,9 @@ public class Edificio {
 	
 	@Column(nullable = false)
 	private String citta;
+	
+	@Convert(converter = CodeConverter.class)
+	private String codice;
 	
 	@JsonIgnore
 	@OneToMany(mappedBy = "edificio", fetch = FetchType.EAGER)
