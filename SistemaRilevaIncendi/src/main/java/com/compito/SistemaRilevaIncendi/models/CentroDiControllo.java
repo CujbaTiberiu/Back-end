@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
-import com.compito.SistemaRilevaIncendi.repository.RegistroRepository;
-
+import org.springframework.stereotype.Component;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -20,6 +18,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Component
 @Entity
 @Data
 @NoArgsConstructor
@@ -27,19 +26,11 @@ import lombok.NoArgsConstructor;
 @Table(name = "Centri_controllo")
 public class CentroDiControllo implements SondaObserver{
  
-	 @Transient
-	 private RegistroRepository registroRepo;
-
 	 @Id
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
 	 private Long id;
 	 
 	 private String nome;
-	 
-	 @Transient
-	 @Column(name = "notifiche")
-	 private String notifica;
-	 
 	 
 	@Override
 	public void update(Sonda sonda) {
@@ -54,24 +45,14 @@ public class CentroDiControllo implements SondaObserver{
 		if(sonda.getLivelloFumo() > 5) {
 			inviaAllarmeRosso(sonda);
 		}
-		
-		notifica = generaNotifica(sonda);
-		
-		Registro r = new Registro();
-		r.setCentroDiControllo(this);
-		r.setSonda(sonda);
-		r.setCorpoMessaggio(notifica);
-		
-		this.registroRepo.save(r);
-	
-		
+
 	}
 	 
 	 private void inviaAllarmeRosso(Sonda sonda) {
 	        String url = "http://host/alarm?idsonda=" + sonda.getId() + "&lat=" + sonda.getLatitudine()
 	                + "&lon=" + sonda.getLongitudine() + "&smokelevel=" + sonda.getLivelloFumo();
-	        System.out.println(url);
 	        System.out.println("Notificato il personale!");
+	        System.out.println(url);
 	    }
 	 
 	 private void inviaAllarmeGiallo(Sonda sonda) {
@@ -85,8 +66,8 @@ public class CentroDiControllo implements SondaObserver{
 	 }
 	 
 
-private String generaNotifica(Sonda sonda) {
-    return "Sonda ID: " + sonda.getId() + ", Latitudine: " + sonda.getLatitudine()
-            + ", Longitudine: " + sonda.getLongitudine() + ", Livello Fumo: " + sonda.getLivelloFumo();
-}
+	// private String generaNotifica(Sonda sonda) {
+	//	 return "Sonda ID: " + sonda.getId() + ", Latitudine: " + sonda.getLatitudine()
+     //       + ", Longitudine: " + sonda.getLongitudine() + ", Livello Fumo: " + sonda.getLivelloFumo();
+	 //}
 }

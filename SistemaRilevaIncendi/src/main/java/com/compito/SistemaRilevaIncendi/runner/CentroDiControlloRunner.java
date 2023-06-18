@@ -14,16 +14,17 @@ public class CentroDiControlloRunner implements CommandLineRunner{
 	
 	@Autowired CentroDiControlloRepository cdcRepo;
 	@Autowired SondaRepository sondaRepo;
+
 	
 	@Override
 	public void run(String... args) throws Exception {
 		
-		
+		 
 	
 		Rillevamento r = new Rillevamento();
 		CentroDiControllo cdc = new CentroDiControllo();
 		cdc.setNome("Centro Generale");
-		cdcRepo.save(cdc);
+		//cdcRepo.save(cdc);
 	
 		
 		r.aggiungi(cdc);
@@ -31,12 +32,15 @@ public class CentroDiControlloRunner implements CommandLineRunner{
 		Sonda s1 = new Sonda("30.21", "25.20", 3);
 		Sonda s2 = new Sonda("50.10", "90.20", 5);
 		Sonda s3 = new Sonda("66", "29.20", 6);
-		sondaRepo.save(s1);
-		sondaRepo.save(s2);
-		sondaRepo.save(s3);
+		//sondaRepo.save(s1);
+		//sondaRepo.save(s2);
+		//sondaRepo.save(s3);
 		
-		//r.inviaRilevamentoIncendio(s1);
-		cdc.update(s1);
+		r.inviaRilevamentoIncendio(s1);
+		r.inviaRilevamentoIncendio(s2);
+		r.inviaRilevamentoIncendio(s3);
+		//cdc.update(s1);
+		
 	}
 	
 	
